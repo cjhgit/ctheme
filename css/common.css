@@ -791,3 +791,11 @@ _top:expression(eval(document.documentElement.scrollTop+document.documentElement
 #tag_cloud-2 a:nth-child(4n) {
     background: #c91d13;
 }
+
+/* 表情大小 */
+.wp-smiley {
+	width: 30px !important;
+	max-width: 30px !important;
+	height: 30px !important;
+	max-height: 30px !important;
+}

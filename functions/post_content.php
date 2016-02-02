@@ -215,54 +215,41 @@ remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('admin_print_scripts', 'print_emoji_detection_script');
 remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action('admin_print_styles', 'print_emoji_styles');
-$wpsmiliestrans = array(
-	':?:' => 'icon_question.gif',
-	':razz:' => 'icon_razz.gif',
-	':sad:' => 'icon_sad.gif',
-	':evil:' => 'icon_evil.gif',
-	':!:' => 'icon_exclaim.gif',
-	':smile:' => 'icon_smile.gif',
-	':oops:' => 'icon_redface.gif',
-	':grin:' => 'icon_biggrin.gif',
-	':eek:' => 'icon_surprised.gif',
-	':shock:' => 'icon_eek.gif',
-	':???:' => 'icon_confused.gif',
-	':cool:' => 'icon_cool.gif',
-	':roll:' => 'icon_rolleyes.gif',
-	':mad:' => 'icon_mad.gif',
-	':twisted:' => 'icon_twisted.gif',
-	':lol:' => 'icon_lol.gif',
-	':wink:' => 'icon_wink.gif',
-	':idea:' => 'icon_idea.gif',
-	':arrow:' => 'icon_arrow.gif',
-	':neutral:' => 'icon_neutral.gif',
-	':cry:' => 'icon_cry.gif',
-	':mrgreen:' => 'icon_mrgreen.gif',
 
-	'8-)' => 'icon_cool.gif',
-	'8-O' => 'icon_eek.gif',
-	':-(' => 'icon_sad.gif',
-	':-)' => 'icon_smile.gif',
-	':-?' => 'icon_confused.gif',
-	':-D' => 'icon_biggrin.gif',
-	':-P' => 'icon_razz.gif',
-	':-o' => 'icon_surprised.gif',
-	':-x' => 'icon_mad.gif',
-	':-|' => 'icon_neutral.gif',
-	';-)' => 'icon_wink.gif',
-	'8O' => 'icon_eek.gif',
-	':(' => 'icon_sad.gif',
-	':)' => 'icon_smile.gif',
-	':?' => 'icon_confused.gif',
-	':D' => 'icon_biggrin.gif',
-	':P' => 'icon_razz.gif',
-	':o' => 'icon_surprised.gif',
-	':x' => 'icon_mad.gif',
-	':|' => 'icon_neutral.gif',
-	';)' => 'icon_wink.gif',
-	':!:' => 'icon_exclaim.gif',
-	':?:' => 'icon_question.gif',
-	'[\疑问]' => 'icon_question.gif',
+$wpsmiliestrans = array(
+	'[呵呵]' => 'f01.png',
+	'[哈哈]' => 'f02.png',
+	'[吐舌]' => 'f03.png',
+	'[啊]' => 'f04.png',
+	'[酷]' => 'f05.png',
+	'[怒]' => 'f06.png',
+	'[开心]' => 'f07.png',
+	'[汗]' => 'f08.png',
+	'[泪]' => 'f09.png',
+	'[黑线]' => 'f10.png',
+	'[鄙视]' => 'f11.png',
+	'[不高兴]' => 'f12.png',
+	'[真棒]' => 'f13.png',
+	'[钱]' => 'f14.png',
+	'[疑问]' => 'f15.png',
+	'[阴险]' => 'f16.png',
+	'[吐]' => 'f17.png',
+	'[咦]' => 'f18.png',
+	'[委屈]' => 'f19.png',
+	'[花心]' => 'f20.png',
+	'[呼~]' => 'f21.png',
+	'[笑脸]' => 'f22.png',
+	'[冷]' => 'f23.png',
+	'[太开心]' => 'f24.png',
+	'[滑稽]' => 'f25.png',
+	'[勉强]' => 'f26.png',
+	'[狂汗]' => 'f27.png',
+	'[乖]' => 'f28.png',
+	'[睡觉]' => 'f29.png',
+	'[惊哭]' => 'f30.png',
+	'[生气]' => 'f31.png',
+	'[惊讶]' => 'f32.png',
+	'[喷]' => 'f33.png',
 );
 
 // 解决表情变成□□的问题
@@ -301,55 +288,35 @@ function smilies_initx() {
  
 remove_action('init', 'smilies_init', 5);
 add_action( 'init' , 'smilies_initx' , 5 );
-
-$smiles = array(
-	':?:' => 'icon_question.gif',
-	':razz:' => 'icon_razz.gif',
-	':sad:' => 'icon_sad.gif',
-	':evil:' => 'icon_evil.gif',
-	':!:' => 'icon_exclaim.gif',
-	':smile:' => 'icon_smile.gif',
-	':oops:' => 'icon_redface.gif',
-	':grin:' => 'icon_biggrin.gif',
-	':eek:' => 'icon_surprised.gif',
-	':shock:' => 'icon_eek.gif',
-	':???:' => 'icon_confused.gif',
-	':cool:' => 'icon_cool.gif',
-	':roll:' => 'icon_rolleyes.gif',
-	':mad:' => 'icon_mad.gif',
-	':twisted:' => 'icon_twisted.gif',
-	':lol:' => 'icon_lol.gif',
-	':wink:' => 'icon_wink.gif',
-	':idea:' => 'icon_idea.gif',
-	':arrow:' => 'icon_arrow.gif',
-	':neutral:' => 'icon_neutral.gif',
-	':cry:' => 'icon_cry.gif',
-	':mrgreen:' => 'icon_mrgreen.gif',
-);
  
 // 输出表情
 function output_smilies() {
-	global $smiles;
+	global $wpsmiliestrans;
 
-	reset($smiles);
-	while (key($smiles) !== null) {
+	reset($wpsmiliestrans);
+	$SMILES_COUNT = 32;
+	while (key($wpsmiliestrans) !== null) {
+	//for ($i = 0; $i < $SMILES_COUNT; $i++) {
 		?>
-        <a href="javascript:grin('<?php echo key($smiles); ?>')"><img src="<?php bloginfo('template_url'); ?>/images/smilies/<?php echo current($smiles); ?>" alt="" /></a>
+        <a href="javascript:grin('<?php echo key($wpsmiliestrans); ?>')"><img src="<?php bloginfo('template_url'); ?>/images/smilies/<?php echo current($wpsmiliestrans); ?>" alt="" /></a>
         
         <?
-		next($smiles);
+		next($wpsmiliestrans);
 	}
 }
 
 // 自定义表情路径
 /*
 第一个参数，如：http://www.chenjianhang.com/wp-includes/images/smilies/frownie.png
-第二个参数，如：frownie.png
+$img，如：frownie.png
 不是加载每个表情都会调用
 */
 function fa_smilies_src($img_src, $img) {
+	/*
 	$img = rtrim($img, "gif");
-	return get_bloginfo('template_directory') . '/images/smilies/' . $img . 'gif';
+	return get_bloginfo('template_directory') . '/images/smilies/' . $img . 'png';
+	*/
+	return get_bloginfo('template_directory') . '/images/smilies/' . $img;
 }
 
 add_filter('smilies_src', 'fa_smilies_src', 1, 10);
@@ -363,15 +330,15 @@ function fa_smilies_custom_button($context) {
     return $context;
 }
 
-// 输出WordPress表情
-function fa_get_wpsmiliestrans(){
+function fa_get_wpsmiliestrans() {
     global $wpsmiliestrans;
+	
     $wpsmilies = array_unique($wpsmiliestrans);
     foreach($wpsmilies as $alt => $src_path){
-        $output .= '<a class="add-smily" data-smilies="'.$alt.'"><img class="wp-smiley" src="'.get_bloginfo('template_directory').'/images/smilies/'. $src_path. '" /></a>';
+        $output .= '<a class="add-smily" data-smilies="'.$alt.'" title=""><img class="wp-smiley" src="'.get_bloginfo('template_directory').'/images/smilies/'. $src_path. '" /></a>';
     }
     return $output;
-}///images/smilies/'.rtrim($src_path, "gif").'gif" /></a>';
+}
 
 add_action('media_buttons_context', 'fa_smilies_custom_button');
 
