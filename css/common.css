@@ -179,12 +179,11 @@ from {
 }
 .side-item-title {
 	height: 45px;
-	margin-left: 15px;
-	margin-right: 15px;
-	color: #4a4a4a;
+	color: #75b5e0;
 	font-size: 20px;
+	text-align: center;
 	line-height: 45px;
-	border-bottom: #73bef0 solid 1px;
+	border-top: #75b5e0 solid 1px;
 }
 .side-item-content, .side-item ul {
 	padding: 15px;
