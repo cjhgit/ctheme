@@ -99,6 +99,14 @@ function set_post_views() {
 
 add_action('get_header', 'set_post_views');
 
+/* 文章中的所有链接新窗口打开 */
+function autoblank($text) {
+	$return = str_replace('<a', '<a target="_blank"', $text);
+	return $return;
+}
+
+add_filter('the_content', 'autoblank');
+
 // 点赞
 add_action('wp_ajax_nopriv_specs_zan', 'specs_zan');
 add_action('wp_ajax_specs_zan', 'specs_zan');
