@@ -60,10 +60,10 @@ else{echo "";} //时间超过时候显示空白
             	<?php 
 				if (get_option('close_lazy')) {
 				?>
-					<img class="post-image" src="<?php echo $imageUrl; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>"/>
+					<img class="post-image" src="<?php echo $imageUrl; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
 				<?php 
 				} else {?>
-					<img class="post-image" src="<?php echo $loadingImage; ?>" data-original="<?php echo $imageUrl; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>"/>
+					<img class="post-image" src="<?php echo $loadingImage; ?>" data-original="<?php echo $imageUrl; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
 				<?php 
 				}
 				?>

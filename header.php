@@ -7,44 +7,44 @@
 
 <html <?php language_attributes(); ?>>
 <head>
-<meta name="baidu-site-verification" content="MvIUbl5H4b" />
+<meta name="baidu-site-verification" content="MvIUbl5H4b">
 <meta charset="<?php bloginfo('charset'); ?>">
-<meta name="keywords" content="<?php echo get_keywords(); ?>" />
-<meta name="description" content="<?php echo get_description(); ?>" />
+<meta name="keywords" content="<?php echo get_keywords(); ?>">
+<meta name="description" content="<?php echo get_description(); ?>">
 <?php if (is_single()) { ?>
-<meta name="robots" content="nofollow" />
+<meta name="robots" content="nofollow">
 <?php } ?>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php echo_title(); ?></title>
 <?php 
 $shortcutIcon = get_option('web_shortcut_icon');
 if (!empty($shortcutIcon)) { ?>
 <!-- 网站图标 -->
-<link rel="shortcut icon" href="<?php echo $shortcutIcon; ?>" />
+<link rel="shortcut icon" href="<?php echo $shortcutIcon; ?>">
 <?php } ?>
 <?php 
 $webIcon = get_option('web_icon');
 if (!empty($webIcon)) { ?>
 <!-- 网站图标 -->
-<link rel="icon" href="<?php echo $webIcon; ?>" />
+<link rel="icon" href="<?php echo $webIcon; ?>">
 <?php } ?>
 
-<link rel="alternate" type="application/rss+xml" title="RSS 2.0 - 所有文章" href="<?php echo get_bloginfo('rss2_url'); ?>" />
-<link rel="alternate" type="application/rss+xml" title="RSS 2.0 - 所有评论" href="<?php bloginfo('comments_rss2_url'); ?>" />
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" />
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/common.css" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0 - 所有文章" href="<?php echo get_bloginfo('rss2_url'); ?>">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0 - 所有评论" href="<?php bloginfo('comments_rss2_url'); ?>">
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css">
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/common.css">
 <?php if (is_home() || is_category () || is_archive() || is_search()) { ?>
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/index.css" />
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/post.css" />
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/index.css">
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/post.css">
 <?php } elseif (is_single() || is_page()) { ?>
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/single.css" />
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/single.css">
 <?php } elseif (is_404()) { ?>
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/404.css" />
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/404.css">
 <?php } ?>
 <!--[if lt IE 9]><script src="<?php echo get_template_directory_uri(); ?>/js/html5-css3.js"></script><![endif]-->
 <!--[if lt IE 8]><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/ie7/ie7.css" /><![endif]-->
 <!--[if lt IE 7]><script src="<?php echo get_template_directory_uri(); ?>/js/ie6.js" type="text/javascript"></script><![endif]-->
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/highslide/highslide.css" type="text/css">
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/highslide/highslide.css">
 <!--
 
 <script src='http://www.chenjianhang.com/wp-includes/js/jquery/jquery.js?ver=1.11.2'></script>
