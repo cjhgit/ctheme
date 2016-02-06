@@ -26,10 +26,17 @@
 					echo '<a class="label" href="' . get_category_link($category[0]->term_id) . '">' . $category[0]->cat_name . '<i class="label-arrow"></i></a>';
 				}
 	        }
+			
+			if (get_option('link_new_window')) {
+				$target = 'target="_blank"';	
+			} else {
+				$target = '';	
+			}
 			?>
             
             
-            <a class="post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a><?php if (get_post_format() == "gallery") echo '（相册）'; ?>
+            
+            <a class="post-title" <?php echo $target; ?> href="<?php the_permalink(); ?>"><?php the_title(); ?></a><?php if (get_post_format() == "gallery") echo '（相册）'; ?>
             <?php 
 $t1=$post->post_date;
 $t2=date("Y-m-d H:i:s");

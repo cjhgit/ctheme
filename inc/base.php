@@ -31,6 +31,12 @@ $options = array(
         'type' => 'title',
     ),
 	array(
+        'label' => '列表文章新窗口打开',
+        'type' => 'checkbox',
+		'id' => 'link_new_window',
+		'desc' => '开启',
+    ),
+	array(
         'label' => '列表显示分类',
         'type' => 'checkbox',
 		'id' => 'hide_category',
