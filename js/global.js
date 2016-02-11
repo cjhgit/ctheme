@@ -1,37 +1,78 @@
-// 公告滚动 公告代码放后面不行
-function AutoScroll(obj) { 
-	$(obj).find("ul:first").animate({ 
-		marginTop:"-25px" }, 500, function() { 
-			$(this).css({marginTop:"0px"}).find("li:first").appendTo(this); }); } $(document).ready(function(){ setInterval('AutoScroll("#notice")',4000) });
-			
-			
+// 返回顶部小插件
+(function($) {
+    
+    $.fn.backToTop = function(options) {
+ 		
+		var defaults = {
+			topOffset: 300, // 开始显示返回顶部链接时与页面顶部的距离（像素）
+			opacityOffset: 1200, // 开始变半透明时与页面顶部的距离（像素）
+			duration: 700, // 返回顶部滚动的时间(ms)
+		};
+		var opts = $.extend(defaults, options);
+		
+        var $elem = $(this); // 返回顶部链接
+        
+        // 隐藏或显示返回顶部链接
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > opts.topOffset) {
+                $elem.addClass('cd-is-visible')
+            } else {
+                $elem.removeClass('cd-is-visible cd-fade-out');
+            }
+          
+            if ($(this).scrollTop() > opts.opacityOffset) { 
+                $elem.addClass('cd-fade-out');
+            }
+        });
+        
+        // 平滑返回顶部
+        $elem.on('click', function(event) {
+            event.preventDefault();
+            $('body,html').animate({
+                scrollTop: 0 ,
+                }, 
+                opts.duration
+            );
+        });
+ 
+        return this;
+    }
+})(jQuery);
+
+// 滚动公告小插件
+(function($) {
+    $.fn.autoScroll = function(options) {
+        
+		var elem = $(this);
+		
+        function aa() {
+			elem.find('ul:first').animate(
+				{ marginTop:'-25px' },
+				500, 
+				function() { 
+					$(this).css({marginTop:'0px'}).find('li:first').appendTo(this); 
+				}
+			); 
+		}
+
+		setInterval(aa, 4000); 
+		
+        return this;
+    }
+    
+})(jQuery);
+
+
 $(document).ready(function($) {
-	
-var offset = 300; // 开始显示返回顶部链接时与页面顶部的距离（像素）
-var offset_opacity = 1200; // 开始隐藏返回顶部链接时与页面顶部的距离（像素）
-var scroll_top_duration = 700; // 返回顶部滚动的时间(ms)
-var $back_to_top = $('.cd-top'); // 返回顶部链接
 
-// 隐藏或显示返回顶部链接
-$(window).scroll(function() {
-	($(this).scrollTop() > offset) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
-	if ($(this).scrollTop() > offset_opacity) { 
-		$back_to_top.addClass('cd-fade-out');
-	}
-});
+// 顶部公告自动滚动
+$('#notice').autoScroll();
 
-// 平滑返回顶部
-$back_to_top.on('click', function(event) {
-	event.preventDefault();
-	$('body,html').animate({
-		scrollTop: 0 ,
-		}, 
-		scroll_top_duration
-	);
-});
+// 返回顶部
+$('.to-top').backToTop();
 
 // 导航菜单悬停
-$("#nav-header").posfixed({
+$('#nav-header').posfixed({
 	distance: 0,
 	pos: "top",
 	type: "while",
@@ -60,7 +101,7 @@ $("#menu-btn").click(function(e) {
 	isShow = !isShow;
 });
 
-// 侧栏悬停（因为代码可以出问题，放在最后^_^）
+// 侧栏悬停（因为代码可能出问题，放在最后^_^）
 //$('#sidebar').myFix();
 	
 // 文章顶
@@ -89,7 +130,8 @@ $.fn.postLike = function() {
 $(document).on("click", "#post-like",
 	function() {
 		$(this).postLike();
-});
+	}
+);
 
 // 文章踩
 
@@ -118,7 +160,8 @@ $.fn.postDislike = function() {
 $(document).on("click", "#post-dislike",
 	function() {
 		$(this).postDislike();
-});
+	}
+);
 
 // 评论顶
 $.fn.commentLike = function() {
@@ -146,7 +189,8 @@ $.fn.commentLike = function() {
 $(document).on("click", ".comment-like",
 	function() {
 		$(this).commentLike();
-});
+	}
+);
 
 // 评论踩
 $.fn.commentDislike = function() {
@@ -174,11 +218,19 @@ $.fn.commentDislike = function() {
 $(document).on("click", ".comment-dislike",
 	function() {
 		$(this).commentDislike();
-});
+	}
+);
+
+// 没乱用的功能
+try {
+    if (window.console && window.console.log) {
+        console.log("Hi，本主题已开源，源码及下载地址：\nhttps://github.com/cjhgithub/ctheme");
+    }
+} catch(e) {
+}
 
 
-
-});
+}); // end of $(document).ready
 
 // 选择表情图片
 function grin(tag) {
@@ -210,5 +262,3 @@ function grin(tag) {
 		myField.focus();
 	}
 }
-;
-//

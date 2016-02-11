@@ -9,21 +9,8 @@
 </footer>
 <!-- 页脚结束 -->
 </div>
-
-    
-<!--   
-<div id="announcement_box" class="ption_a">
-	<div id="announcement">
-    	<ul>
-        	<li>12312132</li>
-            <li>121212</li>
-        </ul>
-    </div>
-
-</div>
--->
-<!-- 返回顶部开始 -->
-<a href="#" class="cd-top"></a>
+<!-- 返回顶部开始 --> 
+<a href="#" class="to-top"><i class="fa fa-angle-up"></i></a>
 <!-- 返回顶部结束 -->
 <?php if (get_option('post_recommend')) { ?>
 <!-- 文章随机推荐开始 -->
