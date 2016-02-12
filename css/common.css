@@ -105,7 +105,7 @@ h5 {
 	width: 100%;
 	height: 2px;
 }
-.header #loading div {
+#loading div {
 	height: 2px;
 	background: #f90;
 }
@@ -525,21 +525,21 @@ from {
 @media only screen and (max-width: 800px) {
 	/* 头部 */
 	.header {
-		height: 100px;
+		height: 150px !important;
 	}
-	.blog-info {
+	.header .blog-info {
 		width: 100%;
 		margin: 0;
 		padding: 0;
 		text-align: center;
 	}
-	.blog-name {
+	.header .blog-name {
 		font-size: 30px;
 		text-align: center;
 		line-height: 100px;
 		margin: 0 auto;
 	}
-	.blog-descption {
+	.header .blog-descption {
 		display: none;
 	}
 	
@@ -615,7 +615,7 @@ from {
 	/* 页码 */
 
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 401px) {
 	.main {
 		width: 100%;
 		min-width: 100%;
@@ -625,7 +625,7 @@ from {
 		width: 0;
 	}
 	/* 头部 */
-	.blog-name {
+	.header .blog-name {
 		
 	}
 }
@@ -680,7 +680,7 @@ from {
 	}
 }
 @media only screen and (min-width: 1250px) {
-	.blog-info {
+	.header .blog-info {
 		margin-left: 0;
 	}
 }
