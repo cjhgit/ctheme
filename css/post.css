@@ -226,67 +226,67 @@
 
 
 @media only screen and (max-width: 800px) {
-/* 文章内容 */
-.post-list .post-item .post-image-box {
-	width: 180px;
-	height: 120px;
-}
-.post-list .post-item .post-content {
-	height: 80px;
-	margin-bottom: 20px;
-	line-height: 20px;
-}
-/* 文章内容 */
-.post-list2 .post-item {
-	width: 33.3%;
-}
+	/* 文章内容 */
+	.post-list .post-item .post-image-box {
+		width: 180px;
+		height: 120px;
+	}
+	.post-list .post-item .post-content {
+		height: 80px;
+		margin-bottom: 20px;
+		line-height: 20px;
+	}
+	/* 文章内容 */
+	.post-list2 .post-item {
+		width: 33.3%;
+	}
 }
 
 @media only screen and (max-width: 800px) {
 
 }
 @media only screen and (max-width: 500px) {
-/* 文章内容 */
-.post-list .post-item .post-title {
-	height: 30px;
-	font-size: 16px;
-	line-height: 30px;
-}
-.post-list .post-item .post-image-box {
-	width: 120px;
-	height: 74px;
-}
-.post-list .post-item .post-content {
-	height: 75px;
-	margin-bottom: 5px;
-	line-height: 25px;
-}
-.post-list .post-info {
-	display: none;
-}
-/* 页码-变小，不显示上一页和下一页 */
-.page {
-	height: 30px;
-	margin-top: 10px;
-	background: #FFF;
-	padding: 10px;
-	overflow: hidden;
-}
-.page .page-numbers {
-	display: inline-block;
-	height: 30px;
-	padding-left: 12px;
-	padding-right: 12px;
-	line-height: 30px;
-	border: #e1e1e1 solid 1px;
-}
-.page .prev,
-.page .next {
-	display: none;
-}
-
-/* 文章内容 */
-.post-list2 .post-item {
-	width: 50%;
-}
+	/* 文章内容 */
+	.post-list .post-item .post-title {
+		height: 30px;
+		font-size: 16px;
+		line-height: 30px;
+	}
+	.post-list .post-item .post-image-box {
+		width: 120px;
+		height: 74px;
+	}
+	.post-list .post-item .post-content {
+		height: 75px;
+		margin-bottom: 5px;
+		line-height: 25px;
+	}
+	.post-list .post-info {
+		display: none;
+	}
+	/* 页码-变小，不显示上一页和下一页 */
+	.page {
+		height: 30px;
+		margin-top: 10px;
+		background: #FFF;
+		padding: 10px;
+		overflow: hidden;
+	}
+	.page .page-numbers {
+		display: inline-block;
+		height: 30px;
+		padding-left: 12px;
+		padding-right: 12px;
+		line-height: 30px;
+		border: #e1e1e1 solid 1px;
+	}
+	.page .prev,
+	.page .next {
+		display: none;
+	}
+	
+	/* 文章内容 */
+	.post-list2 .post-item {
+		width: 50%;
+	}
 }

@@ -5,7 +5,9 @@
 ?>
 <!-- 页脚开始 -->
 <footer class="footer theme-footer clear">
-	<p class="copyright"><?php echo get_option('copyright'); ?></p>
+	<div class="footer-box">
+    	<p class="copyright"><?php echo get_option('copyright'); ?></p>
+    </div>
 </footer>
 <!-- 页脚结束 -->
 </div>

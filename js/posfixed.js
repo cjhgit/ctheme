@@ -1,16 +1,3 @@
-/*!
- * jQuery plugin gapples v1.0
- * posfixed
- * http://gapples.sinaapp.com/
- *
- * Copyright 2013 gapples.sinaapp.com
- * Released under the GPLv2 license
- * http://gapples.sinaapp.com/license
- * 
- * Written by Boyn Xiong
- * Date: 2013-1-3
- */
-
 (function($){
     $.extend($.fn, {
 		posfixed: function(configSettings){

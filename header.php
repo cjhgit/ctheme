@@ -50,7 +50,7 @@ if (!empty($webIcon)) { ?>
 <script src='http://www.chenjianhang.com/wp-includes/js/jquery/jquery.js?ver=1.11.2'></script>
 <script src='http://www.chenjianhang.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
 -->
-<script src="<?php bloginfo('template_url'); ?>/js/jquery-1.8.2.min.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/jquery-2.0.3.min.js"></script>
 
 
 <script>
@@ -365,26 +365,31 @@ a:hover {
 <!-- 头部开始 -->
 <header class="header theme-header">
 	<div id="loading"><div></div></div>
+    
     <?php if (current_user_can('level_10')) { ?>
  		<div class="admin"><a href="<?php bloginfo('url'); ?>/wp-admin">管理</a></div>
 	<?php } ?>
     <?php if (current_user_can('level_10')) { 
 if(function_exists('performance')) performance(true) ;
 } ?>
-	<a id="menu-btn" class="menu-button" href="javascript:void(0)"><i class="fa fa-list"></i></a>
-    <div class="blog-info">
-        <a href="<?php bloginfo('url'); ?>"><span class="blog-name"><?php bloginfo('name'); ?></span></a>
-        <span class="blog-descption type"><?php bloginfo('description'); ?></span>
+	<div class="header-box">
+        <a id="menu-btn" class="menu-button" href="javascript:void(0)"><i class="fa fa-list"></i></a>
+        <div class="blog-info">
+            <a href="<?php bloginfo('url'); ?>"><span class="blog-name"><?php bloginfo('name'); ?></span></a>
+            <span class="blog-descption type"><?php bloginfo('description'); ?></span>
+        </div>
     </div>
 </header>
 <!-- 头部结束 -->
 <!-- 导航菜单开始 -->
 <nav id="nav-header" class="navbar theme-nav">
 	<div id="mask" class="mask"></div>
-<?php
-if (function_exists('wp_nav_menu')) {
-	wp_nav_menu(array('theme_location'=>'primary', 'menu_id'=>'nav', 'container'=>'ul'));
-}
-?>
+    <div class="navbar-box">
+		<?php
+        if (function_exists('wp_nav_menu')) {
+            wp_nav_menu(array('theme_location'=>'primary', 'menu_id'=>'nav', 'container'=>'ul'));
+        }
+        ?>
+    </div>
 </nav>
 <!-- 导航菜单结束-->
