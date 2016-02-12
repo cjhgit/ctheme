@@ -31,7 +31,7 @@ if (!empty($webIcon)) { ?>
 
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0 - 所有文章" href="<?php echo get_bloginfo('rss2_url'); ?>">
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0 - 所有评论" href="<?php bloginfo('comments_rss2_url'); ?>">
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css">
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css">
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/common.css">
 <?php if (is_home() || is_category () || is_archive() || is_search()) { ?>
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/index.css">

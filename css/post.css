@@ -20,6 +20,10 @@
 .post-list {
 	margin-top: 10px;
 }
+.post-list .fa {
+	padding-right: 5px;
+	color: #999;
+}
 .post-list .post-item {
 	padding: 15px;
 	margin-top: 10px;

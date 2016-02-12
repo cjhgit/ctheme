@@ -381,11 +381,7 @@ from {
 	color: #fff;
 	text-align: center;
 }
-/* 图标 */
-.fa {
-	padding-right: 5px;
-	color: #999;
-}
+
 /* 返回顶部按钮 */
 .to-top {
 	display: inline-block;
@@ -415,6 +411,7 @@ from {
     height: 40px;
     color: #fff;
     font-size: 30px;
+	text-align: center;
     line-height: 40px;
 }
 .to-top.cd-is-visible {
@@ -465,6 +462,11 @@ from {
 		visibility: hidden;
 	}
 	.menu {
+	}
+
+	.menu .fa {
+		padding-right: 5px;
+		color: #999;
 	}
 	.menu > .menu-item {
 		float: left;
