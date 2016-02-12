@@ -16,21 +16,34 @@
 <!-- 返回顶部结束 -->
 <?php if (get_option('post_recommend')) { ?>
 <!-- 文章随机推荐开始 -->
-<div id="gg">
-  <div class="wp_close"><a href="javascript:void(0)" onclick="$('#gg').slideUp('slow');" title="关闭">×</a>
-    <div id="feedb">
-    	<a href="#" rel="nofollow" target="_blank" title="欢迎使用QQ邮箱订阅陈建杭个人博客" class="image">
-        	<img alt="订阅图标按钮" src="<?php bloginfo('template_directory'); ?>/images/feed.gif" style="width:23px;height:23px;" />
-        </a>
-	</div>
-	<div class="bulletin">
-		<ul>
-	<?php wp_reset_query();query_posts( array ( 'orderby' => 'rand', 'showposts' => 5, 'ignore_sticky_posts' => 10 ) ); while ( have_posts() ) : the_post();?>
-	<li><a href="<?php the_permalink(); ?>" target="_blank" title="细看 <?php the_title(); ?>">
-	<?php echo '随机推荐：《';the_title();echo '》';if(function_exists('the_views')) {print '( 阅读';the_views();print '次 |</a>';}comments_popup_link('坐等沙发','1条评论','%条评论'); ?>)</li>
-	<?php endwhile; ?>
-		</ul>
-	</div>
+<div id="gg2" class="bottom-recommend">
+	<div class="wp_close">
+    	<a href="javascript:void(0)" onclick="$('#gg2').slideUp('slow');" title="关闭">×</a>
+    	<div id="feedb">
+            <a href="#" rel="nofollow" target="_blank" title="欢迎使用QQ邮箱订阅陈建杭个人博客" class="image">
+                <img alt="订阅图标按钮" src="<?php bloginfo('template_directory'); ?>/images/feed.gif" style="width:23px;height:23px;" />
+            </a>
+        </div>
+		<div class="bulletin">
+            <ul>
+				<?php
+                wp_reset_query();
+                query_posts(array('orderby' => 'rand', 'showposts' => 5, 'ignore_sticky_posts' => 10));
+                while (have_posts()) : the_post();
+                ?>
+                <li>
+                	<a href="<?php the_permalink(); ?>" target="_blank" title="细看 <?php the_title(); ?>">随机推荐：《<?php the_title(); ?>》</a>
+                <?php
+                if (function_exists('the_views')) {
+                    print '( 阅读';the_views();
+                    print '次 |</a>';
+                }
+                comments_popup_link('坐等沙发','1条评论','%条评论'); ?>)
+                </li>
+                <?php endwhile; ?>
+            </ul>
+        </div>
+    </div>
 </div>
 <!-- 文章随机推荐结束 -->
 <?php } ?>
@@ -196,8 +209,8 @@ document.body.oncopy = function() {
 </script>
 <?php } ?>
 
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/highslide/highslide.js"></script>
-<script type="text/javascript">
+<script src="<?php bloginfo('template_url'); ?>/highslide/highslide.js"></script>
+<script>
 jQuery(document).ready(function($) {
     hs.graphicsDir = "<?php bloginfo('template_url'); ?>/highslide/graphics/";
     hs.outlineType = "rounded-white";

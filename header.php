@@ -339,18 +339,6 @@ a:hover {
 	max-width: <?php echo $maxWidth; ?>px;
 }
 
-
-#fix{ display:none; position:fixed; top:0;_position:absolute;_bottom:auto;_top:expression(eval(document.documentElement.scrollTop)); }
-
-.follow {
-  top: 80px;
-  width: 310px;
-  position: fixed;
-  animation: fade-in;
-  animation-duration: 1.2s;
-  -webkit-animation: fade-in 1.2s;
-}
-
 </style>
 
 <!-- wp_head开始，到wp_head结束里面的内容是插件生成的 -->
