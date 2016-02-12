@@ -15,13 +15,16 @@
         // 隐藏或显示返回顶部链接
         $(window).scroll(function() {
             if ($(this).scrollTop() > opts.topOffset) {
-                $elem.addClass('cd-is-visible')
+				$elem.show();
+				//$elem.css('
+                //$elem.addClass('cd-is-visible')
             } else {
-                $elem.removeClass('cd-is-visible cd-fade-out');
+                //$elem.removeClass('cd-is-visible cd-fade-out');
+				$elem.hide();
             }
           
             if ($(this).scrollTop() > opts.opacityOffset) { 
-                $elem.addClass('cd-fade-out');
+                //$elem.addClass('cd-fade-out');
             }
         });
         
@@ -42,31 +45,45 @@
 // 滚动公告小插件
 (function($) {
     $.fn.autoScroll = function(options) {
-        
+        var defaults = {
+			duration: 4000, // 相邻两次滚动的间隔时间（ms）
+			speed: 500, // 滚动一次的时间（ms）
+			lineHeight: 0, // 每条公告的高度
+			line: 1, // 每次滚动的行数（功能未实现）
+		};
+		var opts = $.extend(defaults, options);
 		var elem = $(this);
 		
-        function aa() {
+		var lineHeight = (opts.lineHeight == 0) ? elem.find('ul:first').height() : opts.lineHeight; // 每条公告的高度
+		
+        function scrollAuto() {
 			elem.find('ul:first').animate(
-				{ marginTop:'-25px' },
-				500, 
+				{ marginTop: '-' + lineHeight + 'px' },
+				opts.speed, 
 				function() { 
 					$(this).css({marginTop:'0px'}).find('li:first').appendTo(this); 
 				}
 			); 
 		}
-
-		setInterval(aa, 4000); 
+		
+		// 鼠标指向公告时停止滚动
+		var timerId;
+		elem.hover(function() {
+			clearInterval(timerId);
+		}, function() {
+			timerId = setInterval(scrollAuto, opts.duration); 
+		});
+		timerId = setInterval(scrollAuto, opts.duration); 
 		
         return this;
     }
     
 })(jQuery);
 
-
 $(document).ready(function($) {
 
 // 顶部公告自动滚动
-$('#notice').autoScroll();
+$('#notice').autoScroll({lineHeight: 25});
 
 // 返回顶部
 $('.to-top').backToTop();
@@ -78,8 +95,6 @@ $('#nav-header').posfixed({
 	type: "while",
 	hide:false	// TODO 这里在false前面加一个空格会出错，原因未知
 });  
-
-
 
 var isShow = false; // 菜单是否显示
 

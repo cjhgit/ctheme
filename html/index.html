@@ -14,29 +14,34 @@
 <link rel="stylesheet/less" type="text/css" href="../css/tooltip">
 <style>
 /* 主题配色方案 */
+/* 主题配色方案 */
 .theme-color {
-	color: #a2dcf0;
+	color: #d0ab65;
+}
+.theme-color2 {
+	color: #6c6969;
+}
+.theme-color-bg {
+	background: #d0ab65;
+}
+.theme-color2-bg {
+	background: #6c6969;
 }
 .theme-body {
-	background: #eaf7fd;
+	background: #eee url(../images/themes/body_bg.jpg);
 }
 .theme-header {
 	height: 250px;
 	color: #c19646;
-	background: #d0ab65 url(../images/themes/5727734301085842874.gif);
-	background-size: 100% 100%;
+	background: #d0ab65 url(../images/themes/body_bg.jpg);
 	background-attachment: fixed;
+	background-size: 100% 100%;
 }
 .theme-nav {
-	background: #333;
-	filter:alpha(opacity=95); 
-	opacity: 0.95;  
-	-moz-opacity:0.95;  
-	-khtml-opacity: 0.95;  
-	
+	background: #d0ab65;
 }
 .theme-footer {
-	background: #333;
+	background: #6c6969;
 }
 a {
 	color: #d0ab65;
@@ -46,7 +51,7 @@ a:hover {
 	color: #777;
 }
 .sub-menu .menu-item a {
-	background: #666;
+	background: #6c6969;
 	filter:alpha(opacity=95); 
 	opacity: 0.95;  
 	-moz-opacity:0.95;  
@@ -54,11 +59,31 @@ a:hover {
 }
 .sub-menu .menu-item a:hover {
 	color: #fff;
-	background: #7ac6dd;
+	background: #d0ab65;
+	filter:alpha(opacity=100); 
+	opacity: 1;  
+	-moz-opacity: 1;  
+	-khtml-opacity: 1; 
+}
+.theme-post-content h2 {
+	color: #d0ab65;
+}
+.theme-post-content h3 {
+	color: #d0ab65;
 }
 @media only screen and (max-width: 800px) {
 .sub-menu .menu-item a {
 	background: none;
+}
+}
+@media only screen and (max-width: 400px) {
+.theme-header {
+	color: #fff;
+	background-image: none;
+	height: 100px;
+}
+.theme-header a {
+	color: #fff;
 }
 }
 .content-main {
@@ -124,7 +149,7 @@ a:hover {
     <div class="content-main">
     	<!-- 公告开始 -->
     	<div class="notice">
-        	<i class="fa fa-volume-up"></i>
+        	<i class="fa fa-volume-up theme-color"></i>
             <div id="notice" class="notice-list">
                 <ul>
                     <li>欢迎访问我的个人博客！</li>
@@ -345,7 +370,7 @@ a:hover {
     </div>
 </div>
 <!-- 返回顶部开始 --> 
-<a href="#" class="to-top"><i class="fa fa-angle-up"></i></a>
+<a href="#" class="to-top theme-color-bg"><i class="fa fa-angle-up"></i></a>
 <!-- 返回顶部结束 -->
 <!-- 文章随机推荐开始 -->
 <div id="gg2" class="bottom-recommend">
@@ -373,6 +398,7 @@ a:hover {
 <!-- 文章随机推荐结束 -->
 <script src="../js/jquery-2.0.3.min.js"></script>
 <script src="../js/posfixed.js"></script> 
+<script src="../js/gg.js"></script>
 <script src="../js/tooltip.js"></script>
 <script src="../js/slider.js"></script>
 <script src="../js/myfix.js"></script>

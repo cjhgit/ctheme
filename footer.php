@@ -12,7 +12,7 @@
 <!-- 页脚结束 -->
 </div>
 <!-- 返回顶部开始 --> 
-<a href="#" class="to-top"><i class="fa fa-angle-up"></i></a>
+<a href="#" class="to-top theme-color"><i class="fa fa-angle-up"></i></a>
 <!-- 返回顶部结束 -->
 <?php if (get_option('post_recommend')) { ?>
 <!-- 文章随机推荐开始 -->
@@ -68,13 +68,13 @@ $("img").lazyload({
 	effect: "fadeIn"
 });
 </script>
-<script type='text/javascript'>
+<script>
 /* <![CDATA[ */
 var ratingsL10n = {"plugin_url":"http:\/\/www.chenjianhang.com\/wp-content\/plugins\/wp-postratings","ajax_url":"http:\/\/www.chenjianhang.com\/wp-admin\/admin-ajax.php","text_wait":"Please rate only 1 post at a time.","image":"stars","image_ext":"gif","max":"5","show_loading":"1","show_fading":"1","custom":"0"};
 var ratings_mouseover_image=new Image();ratings_mouseover_image.src=ratingsL10n.plugin_url+"/images/"+ratingsL10n.image+"/rating_over."+ratingsL10n.image_ext;;
 /* ]]> */
 </script>
-<script type='text/javascript' src='http://www.chenjianhang.com/wp-content/plugins/wp-postratings/postratings-js.js?ver=1.83'></script>
+<script src='http://www.chenjianhang.com/wp-content/plugins/wp-postratings/postratings-js.js?ver=1.83'></script>
 
 <!-- 图片懒加载结束 -->
 <script src="<?php bloginfo('template_url'); ?>/js/posfixed.js"></script>
@@ -84,7 +84,10 @@ var ratings_mouseover_image=new Image();ratings_mouseover_image.src=ratingsL10n.
 -->
 <script src="<?php bloginfo('template_url'); ?>/comments-ajax.js"></script>
 <?php if (get_option('post_recommend')) { ?>
-<script src="<?php bloginfo('stylesheet_directory'); ?>/js/gg.js" ></script>
+<script>
+// 底部文章随机推荐
+$(".bulletin").autoScroll({lineHeight: 25});
+</script>
 <?php } ?>
 <?php
 if (is_home()) {

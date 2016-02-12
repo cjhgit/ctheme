@@ -376,7 +376,7 @@ from {
 	background: #4a4a4a;
 	z-index: 100;
 }
-.copyright {
+.footer .copyright {
 	padding-top: 20px;
 	color: #fff;
 	text-align: center;
@@ -391,10 +391,8 @@ from {
 	z-index: 900;
     width: 40px;
     text-align: center;
-	background: #09f;
-	visibility: hidden;
-	opacity: 0;
-	transition: all 0.3s;
+	opacity: .5;
+	transition: all .3s;
     border-radius: 20px;
 }
 .to-top:hover {
@@ -414,17 +412,6 @@ from {
 	text-align: center;
     line-height: 40px;
 }
-.to-top.cd-is-visible {
-	visibility: visible;
-	opacity: 1;
-}
-.to-top.cd-fade-out {
-	opacity: .5;
-}
-.no-touch.cd-top:hover {
-	background-color: #e86256;
-	opacity: 1;
-}
 
 @-webkit-keyframes btn-pudding{0%{-webkit-transform:scale(1.2,0.8)}1%{-webkit-transform:scale(1.18,0.82)}2%{-webkit-transform:scale(1.16,0.84)}3%{-webkit-transform:scale(1.13,0.87)}4%{-webkit-transform:scale(1.1,0.9)}5%{-webkit-transform:scale(1.07,0.93)}6%{-webkit-transform:scale(1.04,0.96)}7%{-webkit-transform:scale(1.01,0.99)}8%{-webkit-transform:scale(0.99,1.01)}9%{-webkit-transform:scale(0.97,1.03)}10%{-webkit-transform:scale(0.95,1.05)}11%{-webkit-transform:scale(0.94,1.06)}12%{-webkit-transform:scale(0.93,1.07)}13%{-webkit-transform:scale(0.93,1.07)}14%{-webkit-transform:scale(0.93,1.07)}15%{-webkit-transform:scale(0.93,1.07)}16%{-webkit-transform:scale(0.94,1.06)}17%{-webkit-transform:scale(0.94,1.06)}18%{-webkit-transform:scale(0.95,1.05)}19%{-webkit-transform:scale(0.96,1.04)}20%{-webkit-transform:scale(0.98,1.02)}21%{-webkit-transform:scale(0.99,1.01)}22%{-webkit-transform:scale(1,1)}23%{-webkit-transform:scale(1,1)}24%{-webkit-transform:scale(1.01,0.99)}25%{-webkit-transform:scale(1.02,0.98)}26%{-webkit-transform:scale(1.02,0.98)}27%{-webkit-transform:scale(1.02,0.98)}28%{-webkit-transform:scale(1.03,0.97)}29%{-webkit-transform:scale(1.03,0.97)}30%{-webkit-transform:scale(1.02,0.98)}31%{-webkit-transform:scale(1.02,0.98)}32%{-webkit-transform:scale(1.02,0.98)}33%{-webkit-transform:scale(1.02,0.98)}34%{-webkit-transform:scale(1.01,0.99)}35%{-webkit-transform:scale(1.01,0.99)}36%{-webkit-transform:scale(1.01,0.99)}37%{-webkit-transform:scale(1,1)}38%{-webkit-transform:scale(1,1)}39%{-webkit-transform:scale(1,1)}40%{-webkit-transform:scale(0.99,1.01)}41%{-webkit-transform:scale(0.99,1.01)}42%{-webkit-transform:scale(0.99,1.01)}43%{-webkit-transform:scale(0.99,1.01)}44%{-webkit-transform:scale(0.99,1.01)}45%{-webkit-transform:scale(0.99,1.01)}46%{-webkit-transform:scale(0.99,1.01)}47%{-webkit-transform:scale(0.99,1.01)}48%{-webkit-transform:scale(0.99,1.01)}49%{-webkit-transform:scale(1,1)}}
 
@@ -437,10 +424,9 @@ from {
 .notice .fa-volume-up {
 	float: left;
 	height: 25px;
-	color: #09f;
 	line-height: 25px;
 }
-.notice-list {
+.notice .notice-list {
 	height: 25px;
 	margin-left: 10px;
 	line-height: 25px;
@@ -484,12 +470,12 @@ from {
 		padding: 0 30px;
 		color: #fff;
 		line-height: 50px;
-		transition: all 0.5s;
 	}
 	.current-menu-item a {
 		border-bottom: #fff solid 2px;
 	}
 	.menu > .menu-item > a:hover {
+		
 		border-bottom: #fff solid 2px;
 	}
 	.sub-menu {
@@ -498,7 +484,6 @@ from {
 		width: 0;
 		height: 0;
 		z-index: 100;
-		
 	}
 	.menu > .menu-item:hover .sub-menu {
 		display: block;
@@ -506,6 +491,7 @@ from {
 	.sub-menu .menu-item {
 		width: 200px;
 		height: 45px;
+		transform: rotateY(0deg);
 		transition: opacity .4s, transform .5s;
 	}
 	.sub-menu .menu-item a {
