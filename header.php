@@ -8,6 +8,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta name="baidu-site-verification" content="MvIUbl5H4b">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta charset="<?php bloginfo('charset'); ?>">
 <meta name="keywords" content="<?php echo get_keywords(); ?>">
 <meta name="description" content="<?php echo get_description(); ?>">
