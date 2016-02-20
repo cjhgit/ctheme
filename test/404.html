@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta name="baidu-site-verification" content="MvIUbl5H4b" />
+<meta charset="utf-8">
+<title>页面找不到</title>
+<meta name="keywords" content="陈建杭,建杭,陈建杭个人主页,陈建杭的博客" />
+<meta name="description" content="欢迎访问陈建杭的个人主页，这里有我分享给大家的技术以及开发过程中的所思所想，欢迎大家一起交流。欢迎收藏陈建杭的博客" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0 - 所有文章" href="http://www.chenjianhang.com/feed" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0 - 所有评论" href="http://www.chenjianhang.com/comments/feed" />
+<link rel="stylesheet" href="../src/style.css" />
+<link rel="stylesheet" href="../src/css/common.css" />
+<link rel="stylesheet" href="../src/css/index.css" />
+<link rel="stylesheet" href="../src/css/post.css" />
+<link rel="stylesheet" href="../src/css/404.css" />
+<link rel="stylesheet" href="css/theme.css" />
+</head>
+<body background="#dd3333">
+<div class="wrap"> 
+<!-- 主体内容开始 -->
+<div class="content">
+    <div class="content-main">
+        <div class="main">
+        	<div class="error404">
+            	<p class="state-code">404</p>
+        		<p class="tip-text">您的页面找不到了</p>
+            	
+        	</div>
+            <ul class="recommend">
+                <h3>文章推荐</h3>
+                <li class="post"> 
+                    <img class="post-image" src="../src/images/post-default.jpg" alt="一套完整的安卓开发推荐方案" title="一套完整的安卓开发推荐方案"/> 
+                    <a class="post-title" href="http://www.chenjianhang.com/915.html">一套完整的安卓开发整的安卓开发推荐方案</a>
+                </li>
+                <li class="post"> 
+                    <img class="post-image" src="../src/images/post-default.jpg" alt="一套完整的安卓开发推荐方案" title="一套完整的安卓开发推荐方案"/> 
+                    <a class="post-title" href="http://www.chenjianhang.com/915.html">一套完整的安卓开发整的安卓开发推荐方案</a>
+                </li>
+                <li class="post"> 
+                    <img class="post-image" src="../src/images/post-default.jpg" alt="一套完整的安卓开发推荐方案" title="一套完整的安卓开发推荐方案"/> 
+                    <a class="post-title" href="http://www.chenjianhang.com/915.html">一套完整的安卓开发整的安卓开发推荐方案</a>
+                </li>
+                <li class="post"> 
+                    <img class="post-image" src="../src/images/post-default.jpg" alt="一套完整的安卓开发推荐方案" title="一套完整的安卓开发推荐方案"/> 
+                    <a class="post-title" href="http://www.chenjianhang.com/915.html">一套完整的安卓开发整的安卓开发推荐方案</a>
+                </li>
+            </ul>
+        </div>
+        <div class="side">
+        	
+            
+        </div>
+    </div>
+</div>
+<!-- 主体内容结束 --> 
+<!-- 页脚开始 -->
+<footer class="footer clear">
+    <p class="copyright">copyright © 2015-2016 陈建杭</p>
+</footer>
+<!-- 页脚结束 --> 
+</div>
+<!-- 返回顶部 --> 
+<a href="#" class="cd-top"></a>
+<script src="../js/jquery-1.8.2.min.js"></script>
+<script src="../js/posfixed.js"></script> 
+<script src="../js/global.js"></script>
+<script src="../js/slider.js"></script>
+<script>
+
+$(function() {
+	var bannerSlider = new Slider($('#banner_tabs'), {
+		time: 5000,
+		delay: 400,
+		event: 'hover',
+		auto: true,
+		mode: 'fade',
+		controller: $('#bannerCtrl'),
+		activeControllerCls: 'active'
+	});
+	$('#banner_tabs .flex-prev').click(function() {
+		bannerSlider.prev()
+	});
+	$('#banner_tabs .flex-next').click(function() {
+		bannerSlider.next()
+	});
+	$('#bannerCtrl').hide();
+	$('#banner_tabs').hover(function() {
+		$('#bannerCtrl').show();
+	}, 
+	function() {
+		$('#bannerCtrl').hide();
+	});
+	
+	// 适配当前屏幕大小
+	resize();
+	
+	// 窗口大小改变时，网页重新适配窗口
+	$(window).resize(function() {
+		resize();
+	});
+
+});
+/* 适配当前屏幕大小 */
+function resize() {
+	var height = $('#banner_tabs').width() * 2 / 4;
+	if (height > 500) {
+		height = 500;
+	}
+	$('#banner_tabs').height(height);
+	
+}
+</script>
+</body>
+</html>
