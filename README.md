@@ -27,6 +27,10 @@
 
 GPLv2
 
+## TODO
+
+.post 样式污染
+CMS美化
 
 ## 其他
 

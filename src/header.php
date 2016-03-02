@@ -39,6 +39,7 @@ if (!empty($webIcon)) { ?>
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/post.css">
 <?php } elseif (is_single() || is_page()) { ?>
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/single.css">
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/404.css">
 <?php } elseif (is_404()) { ?>
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/404.css">
 <?php } ?>

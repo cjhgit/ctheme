@@ -1,57 +1,80 @@
 <?php
 /**
- * CMS页面
- */
+Template Name: CMS 页面
+Description: chenjianhang.com主题模板 
+*/
 ?>
 <?php get_header(); ?>
+<!---->
 <div class="content">
 	<div class="content-main">
-    	<?php 
-		$args = array('post_type' => 'notice', 'posts_per_page' => 5); 
-		$loop = new WP_Query($args);
-    	if ($loop->have_posts()) {
-		?>
-        <?php if (get_option('show_notice')) { ?>
-        <!-- 公告开始 -->
-    	<div class="notice">
-        	<i class="fa fa-volume-up"></i>
-            <div id="notice" class="notice-list">
-            	<ul>
-				<?php
-                while ($loop->have_posts()) { 
-					$loop->the_post();
-                	echo '<li>' . get_the_content() . '</li>';
-				}
-				?>
-            	</ul>
-            </div>
-        </div>
-        <!-- 公告结束 -->
-        <?php } ?>
-        <?php } ?>
     	<div class="main">
-        	<?php 
-			if (!get_option('close_slide') && (!$paged || $paged && $paged == 1)) {
-				include 'banner.php';
-			} 
-			?>
+    		<?php
+    		$strArrIds = explode(",", '11,29,59');
+			$ids = array();
 
-            <?php 
-			// 已经遍历过文章了，重置一下，才能再次遍历
-			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-			$args = array(
-				'caller_get_posts' => 1,
-				'paged' => $paged
-			);
-			query_posts($args);
-			?>
+			for ($i = 0, $length = count($strArrIds); $i < $length; $i++) {
+				$ids[$i] = intval($strArrIds[$i]);
+				$imageUrl = getImageByPost($post);
+				?>
+				
+				<ul class="cms">
+					<div class="cms-header">
+	            		<h1><?php echo get_cat_name($ids[$i]); ?></h1>
+	            		<a class="sms-more" href="<?php echo get_category_link($ids[$i]); ?>">更多</a>
+	            	</div>
 
-        	<?php get_template_part('post'); ?>
-            <div class="page">
-           		<?php wp_pagenavi(); ?>
-            </div>
+		    		<?php
+		        	$args = array(
+						'cat' => $ids[$i],
+						'showposts' => 4,
+					);
+					query_posts($args);
+					while (have_posts()) {
+						the_post();
+						?>
+						<li class="post"> 
+		                    <img class="post-image" src="<?php echo $imageUrl; ?>" alt="<?php the_title(); ?>"> 
+		                    <a class="post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+		                </li>
+						<p></p>
+						
+						<?php 
+					} ?> 
+				</ul> 
+			<? }
+			?>
         </div>
         <?php get_sidebar(); ?>
     </div>
 </div>
+<!---->
 <?php get_footer(); ?>
+<script>
+$.fn.postLike = function() {
+	if ($(this).hasClass('done')) {
+		alert('您已赞过该文章');
+		return false;
+	} else {
+		$(this).addClass('done');
+		var id = $(this).data("id"),
+		action = $(this).data('action'),
+		rateHolder = $(this).children('.count');
+		var ajax_data = {
+			action: "specs_zan",
+			um_id: id,
+			um_action: action
+		};
+		$.post("/wp-admin/admin-ajax.php", ajax_data,
+		function(data) {
+			$(rateHolder).html(data);
+		});
+		return false;
+	}
+};
+$(document).on("click", ".specsZan",
+	function() {
+		$(this).postLike();
+});
+
+</script>
