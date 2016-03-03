@@ -3,19 +3,19 @@
  * 页脚模板
  */
 ?>
-<!-- 页脚开始 -->
+<!-- 页脚 -->
 <footer class="footer theme-footer clear">
 	<div class="footer-box">
     	<p class="copyright"><?php echo get_option('copyright'); ?></p>
     </div>
 </footer>
-<!-- 页脚结束 -->
+<!-- /页脚 -->
 </div>
-<!-- 返回顶部开始 --> 
-<a href="#" class="to-top theme-color"><i class="fa fa-angle-up"></i></a>
-<!-- 返回顶部结束 -->
+<!-- 返回顶部 --> 
+<a href="#" class="to-top theme-color-bg"><i class="fa fa-angle-up"></i></a>
+<!-- /返回顶部 -->
 <?php if (get_option('post_recommend')) { ?>
-<!-- 文章随机推荐开始 -->
+<!-- 文章随机推荐 -->
 <div id="gg2" class="bottom-recommend">
 	<div class="wp_close">
     	<a href="javascript:void(0)" onclick="$('#gg2').slideUp('slow');" title="关闭">×</a>
@@ -45,18 +45,12 @@
         </div>
     </div>
 </div>
-<!-- 文章随机推荐结束 -->
+<!-- /文章随机推荐 -->
 <?php } ?>
 
-<!-- wp_footer开始 -->
+<!-- wp_footer -->
 <?php wp_footer(); ?>
-<!-- wp_footer结束 -->
-
-
-
-
-
-
+<!-- /wp_footer -->
 
 <!-- 懒加载-->
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.lazyload.min.js"></script>
