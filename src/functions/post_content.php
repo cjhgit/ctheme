@@ -193,13 +193,13 @@ function all_img($soContent) {
 
 /* 获取懒加载图片的路径 */
 function get_lazyload_image() {
-	return get_bloginfo('template_directory') . '/images/nothing.png';
+	return get_bloginfo('template_directory') . '/asset/img/nothing.png'; // TODO 常量化
 }
 
 /* 文章内容的图片懒加载 */
 function lazyload($content) {  
     if (!get_option('close_lazy') && (!is_feed() || !is_robots)) {
-		$loadimg_url = get_bloginfo('template_directory') . '/images/loading.gif';
+		$loadimg_url = get_bloginfo('template_directory') . '/asset/img/loading.gif'; // TODO 常量化
         $content = preg_replace('/<img(.+)src=[\'"]([^\'"]+)[\'"](.*)>/i',"<img\$1data-original=\"\$2\" src=\"$loadimg_url\"\$3>\n<noscript>\$0</noscript>", $content);
     }
     return $content;
@@ -324,7 +324,7 @@ function fa_smilies_src($img_src, $img) {
 	$img = rtrim($img, "gif");
 	return get_bloginfo('template_directory') . '/images/smilies/' . $img . 'png';
 	*/
-	return get_bloginfo('template_directory') . '/images/smilies/' . $img;
+	return get_bloginfo('template_directory') . '/asset/img/smilies/' . $img; // TODO 常量化
 }
 
 add_filter('smilies_src', 'fa_smilies_src', 1, 10);
@@ -343,7 +343,7 @@ function fa_get_wpsmiliestrans() {
 	
     $wpsmilies = array_unique($wpsmiliestrans);
     foreach($wpsmilies as $alt => $src_path){
-        $output .= '<a class="add-smily" data-smilies="'.$alt.'" title=""><img class="wp-smiley" src="'.get_bloginfo('template_directory').'/images/smilies/'. $src_path. '" /></a>';
+        $output .= '<a class="add-smily" data-smilies="'.$alt.'" title=""><img class="wp-smiley" src="'.get_bloginfo('template_directory').'/asset/img/smilies/'. $src_path. '" /></a>'; // TODO 常量化
     }
     return $output;
 }

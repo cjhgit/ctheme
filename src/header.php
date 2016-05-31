@@ -3,8 +3,9 @@
  * 网页头部模板
  */
 ?>
-<!doctype html>
+<?php include('constant.php') ?>
 
+<!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta name="baidu-site-verification" content="MvIUbl5H4b">
@@ -32,27 +33,21 @@ if (!empty($webIcon)) { ?>
 
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0 - 所有文章" href="<?php echo get_bloginfo('rss2_url'); ?>">
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0 - 所有评论" href="<?php bloginfo('comments_rss2_url'); ?>">
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css">
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/common.css">
+<link rel="stylesheet" href="<?php echo RES_PATH ?>/lib/eui/eui.min.css">
+<link rel="stylesheet" href="<?php echo RES_PATH ?>/lib/font-awesome/font-awesome.min.css">
+<link rel="stylesheet" href="<?php echo RES_PATH ?>/css/common.css">
 <?php if (is_home() || is_category () || is_archive() || is_search()) { ?>
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/index.css">
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/post.css">
+<link rel="stylesheet" href="<?php echo RES_PATH ?>/css/index.css">
 <?php } elseif (is_single() || is_page()) { ?>
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/single.css">
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/404.css">
+<link rel="stylesheet" href="<?php echo RES_PATH ?>/css/single.css">
+<link rel="stylesheet" href="<?php echo RES_PATH ?>/css/404.css">
 <?php } elseif (is_404()) { ?>
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/404.css">
+<link rel="stylesheet" href="<?php echo RES_PATH ?>/css/404.css">
 <?php } ?>
 <!--[if lt IE 9]><script src="<?php echo get_template_directory_uri(); ?>/js/html5-css3.js"></script><![endif]-->
 <!--[if lt IE 8]><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/ie7/ie7.css" /><![endif]-->
-<!--[if lt IE 7]><script src="<?php echo get_template_directory_uri(); ?>/js/ie6.js" type="text/javascript"></script><![endif]-->
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/highslide/highslide.css">
-<!--
-
-<script src='http://www.chenjianhang.com/wp-includes/js/jquery/jquery.js?ver=1.11.2'></script>
-<script src='http://www.chenjianhang.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
--->
-<script src="<?php bloginfo('template_url'); ?>/js/jquery-2.0.3.min.js"></script>
+<link rel="stylesheet" href="<?php echo RES_PATH ?>/lib/highslide/highslide.css">
+<script src="<?php echo RES_PATH; ?>/lib/jquery/jquery-1.10.2.min.js"></script>
 
 
 <script>
@@ -143,8 +138,8 @@ $themes = array(
 		'headerTextColor' => '#c19646',
         'aColor' => '#d0ab65',
 		'bgColor' => '#eee',
-		'bgUrl' => get_bloginfo('template_url') . '/images/themes/body_bg.jpg',
-		'headerImage' => get_bloginfo('template_url') . '/images/themes/head_bg.jpg',
+		'bgUrl' => RES_PATH . '/img/themes/body_bg.jpg',
+		'headerImage' => RES_PATH . '/img/themes/head_bg.jpg',
     ),
 	// 小清新-天蓝色
 	array(
@@ -372,7 +367,7 @@ if(function_exists('performance')) performance(true) ;
 </header>
 <!-- 头部结束 -->
 <!-- 导航菜单开始 -->
-<nav id="nav-header" class="navbar theme-nav">
+<nav id="nav-header" class="mynavbar theme-nav">
 	<div id="mask" class="mask"></div>
     <div class="navbar-box">
 		<?php

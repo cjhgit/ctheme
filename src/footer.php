@@ -7,6 +7,7 @@
 <footer class="footer theme-footer clear">
 	<div class="footer-box">
     	<p class="copyright"><?php echo get_option('copyright'); ?></p>
+        <a class="record" href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">粤ICP备16031950号-1</a>
     </div>
 </footer>
 <!-- /页脚 -->
@@ -53,10 +54,10 @@
 <!-- /wp_footer -->
 
 <!-- 懒加载-->
-<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.lazyload.min.js"></script>
+<script src="<?php echo RES_PATH ?>/lib/lazyload/jquery.lazyload.min.js"></script>
 <script>
 $('#loading div').animate({'width':'80%'}, 50);  // 第四个节点
-;
+
 // 处理懒加载的图片
 $("img").lazyload({
 	effect: "fadeIn"
@@ -71,8 +72,8 @@ var ratings_mouseover_image=new Image();ratings_mouseover_image.src=ratingsL10n.
 <script src='http://www.chenjianhang.com/wp-content/plugins/wp-postratings/postratings-js.js?ver=1.83'></script>
 
 <!-- 图片懒加载结束 -->
-<script src="<?php bloginfo('template_url'); ?>/js/posfixed.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/js/global.js"></script>
+<script src="<?php echo RES_PATH ?>/js/posfixed.js"></script>
+<script src="<?php echo RES_PATH ?>/js/common.js"></script>
 <!--
 <script src="<?php bloginfo('template_url'); ?>/js/myfix.js"></script>
 -->
@@ -86,7 +87,7 @@ $(".bulletin").autoScroll({lineHeight: 25});
 <?php
 if (is_home()) {
 ?>
-<script src="<?php bloginfo('template_url'); ?>/js/slider.js"></script>
+<script src="<?php echo RES_PATH ?>/js/slider.js"></script>
 <script>
 
 $(function() {
@@ -206,10 +207,10 @@ document.body.oncopy = function() {
 </script>
 <?php } ?>
 
-<script src="<?php bloginfo('template_url'); ?>/highslide/highslide.js"></script>
+<script src="<?php echo RES_PATH ?>/lib/highslide/highslide.js"></script>
 <script>
 jQuery(document).ready(function($) {
-    hs.graphicsDir = "<?php bloginfo('template_url'); ?>/highslide/graphics/";
+    hs.graphicsDir = "<?php echo RES_PATH ?>/lib/highslide/graphics/";
     hs.outlineType = "rounded-white";
     hs.dimmingOpacity = 0.8;
     hs.outlineWhileAnimating = true;

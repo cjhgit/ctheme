@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta name="baidu-site-verification" content="MvIUbl5H4b" />
+<meta charset="utf-8">
+<title>标签云</title>
+<meta name="keywords" content="陈建杭,建杭,陈建杭个人主页,陈建杭的博客" />
+<meta name="description" content="欢迎访问陈建杭的个人主页，这里有我分享给大家的技术以及开发过程中的所思所想，欢迎大家一起交流。欢迎收藏陈建杭的博客" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0 - 所有文章" href="http://www.chenjianhang.com/feed" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0 - 所有评论" href="http://www.chenjianhang.com/comments/feed" />
+<link rel="stylesheet" href="../src/asset/lib/eui/eui.min.css">
+<link rel="stylesheet" href="../style.css" />
+<link rel="stylesheet" href="../src/asset/css/common.css">
+<link rel="stylesheet" href="../src/asset/css/index.css">
+<link rel="stylesheet" href="../src/asset/css/categories.css">
+<link rel="stylesheet" href="css/theme.css">
+</head>
+<body background="#dd3333">
+<div class="wrap"> 
+
+    <!-- 主体内容开始 -->
+    <div class="content">
+        <div class="content-main">
+            <div class="main">
+                <div class="category">
+                    <p class="category-name">分类</p>
+                    <ul id="cat_list">
+                        <li class="cat-item cat-item-49"><a href="http://www.chenjianhang.com/category/ecshop" >ecshop</a> </li>
+                        <li class="cat-item cat-item-29"><a href="http://www.chenjianhang.com/category/java" >java</a> </li>
+                        <li class="cat-item cat-item-51"><a href="http://www.chenjianhang.com/category/java-web" >java web</a>
+                            <ul class='children'>
+                                <li class="cat-item cat-item-58"><a href="http://www.chenjianhang.com/category/java-web/spring" >spring</a> </li>
+                            </ul>
+                        </li>
+                        <li class="cat-item cat-item-45"><a href="http://www.chenjianhang.com/category/photo" >photo</a> </li>
+                        <li class="cat-item cat-item-55"><a href="http://www.chenjianhang.com/category/php" >php</a> </li>
+                        <li class="cat-item cat-item-11"><a href="http://www.chenjianhang.com/category/seo" >seo</a> </li>
+                        <li class="cat-item cat-item-4"><a href="http://www.chenjianhang.com/category/wordpress" >wordpress</a> </li>
+                        <li class="cat-item cat-item-61"><a href="http://www.chenjianhang.com/category/others" >其他</a> </li>
+                        <li class="cat-item cat-item-6"><a href="http://www.chenjianhang.com/category/android" >安卓</a> </li>
+                        <li class="cat-item cat-item-59"><a href="http://www.chenjianhang.com/category/database" >数据库</a> </li>
+                        <li class="cat-item cat-item-1"><a href="http://www.chenjianhang.com/category/uncategorized" >未分类</a> </li>
+                        <li class="cat-item cat-item-2"><a href="http://www.chenjianhang.com/category/gamemake" >游戏制作</a> </li>
+                        <li class="cat-item cat-item-53"><a href="http://www.chenjianhang.com/category/webmaster" >站长</a> </li>
+                        <li class="cat-item cat-item-57"><a href="http://www.chenjianhang.com/category/code" >编程</a> </li>
+                        <li class="cat-item cat-item-33"><a href="http://www.chenjianhang.com/category/web_design" >网页设计</a> </li>
+                        <li class="cat-item cat-item-54"><a href="http://www.chenjianhang.com/category/design-pattern" >设计模式</a> </li>
+                        <li class="cat-item cat-item-60"><a href="http://www.chenjianhang.com/category/code-2" >软件开发</a> </li>
+                    </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="side">
+        
+            </div>
+        </div>
+    </div>
+    <!-- 主体内容结束 --> 
+    <!-- 页脚开始 -->
+    <footer class="footer clear">
+        <p class="copyright">copyright © 2015-2016 陈建杭</p>
+    </footer>
+    <!-- 页脚结束 --> 
+</div>
+<!-- 返回顶部 --> 
+<a href="#" class="cd-top"></a> 
+<script src="../js/jquery-1.8.2.min.js"></script> 
+<script src="../js/posfixed.js"></script> 
+<script src="../js/global.js"></script> 
+<script src="../js/slider.js"></script> 
+<script>
+
+$(function() {
+	var bannerSlider = new Slider($('#banner_tabs'), {
+		time: 5000,
+		delay: 400,
+		event: 'hover',
+		auto: true,
+		mode: 'fade',
+		controller: $('#bannerCtrl'),
+		activeControllerCls: 'active'
+	});
+	$('#banner_tabs .flex-prev').click(function() {
+		bannerSlider.prev()
+	});
+	$('#banner_tabs .flex-next').click(function() {
+		bannerSlider.next()
+	});
+	$('#bannerCtrl').hide();
+	$('#banner_tabs').hover(function() {
+		$('#bannerCtrl').show();
+	}, 
+	function() {
+		$('#bannerCtrl').hide();
+	});
+	
+	// 适配当前屏幕大小
+	resize();
+	
+	// 窗口大小改变时，网页重新适配窗口
+	$(window).resize(function() {
+		resize();
+	});
+
+});
+/* 适配当前屏幕大小 */
+function resize() {
+	var height = $('#banner_tabs').width() * 2 / 4;
+	if (height > 500) {
+		height = 500;
+	}
+	$('#banner_tabs').height(height);
+	
+}
+</script>
+</body>
+</html>

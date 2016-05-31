@@ -35,13 +35,13 @@ function getImageByPost($post) {
 		
 		$theme = get_option('themes');
 		if ($theme == '10') {
-			return get_stylesheet_directory_uri() . '/images/themes/post-default10.jpg';
+			return get_stylesheet_directory_uri() . '/asset/img/themes/post-default10.jpg'; // TODO 常量化
 		} elseif ($theme == 11) {
-			return get_stylesheet_directory_uri() . '/images/themes/post-default11.jpg';
+			return get_stylesheet_directory_uri() . '/asset/img/themes/post-default11.jpg';
 		} elseif ($theme == 12) {
-			return get_stylesheet_directory_uri() . '/images/themes/post-default12.jpg';
+			return get_stylesheet_directory_uri() . '/asset/img/themes/post-default12.jpg';
 		} else {
-			return get_stylesheet_directory_uri() . '/images/themes/post-default10.jpg'; // TODO
+			return get_stylesheet_directory_uri() . '/asset/img/themes/post-default10.jpg'; // TODO
 		}
 		
 	}
