@@ -130,22 +130,22 @@ a.button {
     padding: 15px 0;
 }
 
-.header__logo__fullname {
+.header-logo-fullname {
     font-size: 2em;
     font-family: 'PingHei', 'STHeiti SC', 'SimHei';
 }
 
-.header__logo__jobtitle {
+.header-logo-jobtitle {
     color: #888;
 }
 
-.header__address {
+.header-address {
     font-style: normal;
     line-height: 21px;
     font-size: 0.875em;
 }
 
-.header__address__item {
+.address-item {
     padding-left: 24px;
     background: url(../img/icon-sprites.png) no-repeat;
     background-size: 20px auto;
@@ -154,56 +154,56 @@ a.button {
     line-height: 20px;
 }
 
-.header__address__item-phone {
+.address-item-phone {
     background-position: 0 0;
 }
 
-.header__address__item-qq {
+.address-item-qq {
     background-position: 0 -28px;
 }
 
-.header__address__item-email {
+.address-item-email {
     background-position: left bottom;
 }
 
-.header__address__item-blog {
+.address-item-blog {
     padding-left: 0;
     background: none;
 }
 
-.header__address .button {
+.header-address .button {
     font-size: 0.86em;
 }
 
 @media (max-width: 319px) {
-    .header__logo {
+    .header-logo {
         margin-bottom: 12px;
         line-height: 1.3;
     }
 
-    .header__logo__jobtitle {
+    .header-logo-jobtitle {
         display: block;
     }
 }
 
 @media (min-width: 320px) {
-    .header__logo {
+    .header-logo {
         line-height: 40px;
         height: 40px;
     }
 
-    .header__logo__jobtitle {
+    .header-logo-jobtitle {
         padding-left: 10px;
     }
 }
 
 @media (min-width: 480px) {
-    .header__address__item {
+    .address-item {
         float: left;
         margin-right: 22px;
     }
 
-    .header__address__item-blog {
+    .address-item-blog {
         float: right;
         margin-right: 0;
     }
@@ -223,16 +223,16 @@ a.button {
         position: relative;
     }
 
-    .header__logo {
+    .header-logo {
         position: relative;
         float: left;
     }
 
-    .header__logo__fullname {
+    .header-logo-fullname {
         font-size: 2.5em;
     }
 
-    .header__logo__jobtitle {
+    .header-logo-jobtitle {
         position: absolute;
         left: 100%;
         bottom: 0;
@@ -240,13 +240,13 @@ a.button {
         white-space: nowrap;
     }
 
-    .header__address {
+    .header-address {
         position: absolute;
         right: 0;
         bottom: 0;
     }
 
-    .header__address__item {
+    .address-item {
         margin-left: 28px;
         margin-right: 0;
     }
@@ -313,13 +313,14 @@ a.button {
 }
 
 /* 技术技能章节 */
-.tech-skill-list__item {
+.skill-item {
     position: relative;
     -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
 }
 
-.tech-skill-list__item-javascript {
+.skill-item-javascript {
+    width: 90%;
     -webkit-animation-name: bar-javascript;
     animation-name: bar-javascript;
 }
@@ -338,11 +339,11 @@ a.button {
         width: 0;
     }
     100% {
-        width: 100%;
+        width: 90%;
     }
 }
 
-.tech-skill-list__item-html-and-css {
+.skill-item-html-and-css {
     width: 90%;
     -webkit-animation-name: bar-html-and-css;
     animation-name: bar-html-and-css;
@@ -390,7 +391,7 @@ a.button {
     }
 }
 
-.tech-skill-list__item-aspdotnet {
+.skill-item-android {
     width: 60%;
     -webkit-animation-name: bar-aspdotnet;
     animation-name: bar-aspdotnet;
@@ -414,7 +415,7 @@ a.button {
     }
 }
 
-.tech-skill-list__item-sql {
+.skill-item-sql {
     width: 55%;
     -webkit-animation-name: bar-sql;
     animation-name: bar-sql;
@@ -438,7 +439,7 @@ a.button {
     }
 }
 
-.tech-skill-list__item-photoshop {
+.skill-item-photoshop {
     width: 50%;
     -webkit-animation-name: bar-photoshop;
     animation-name: bar-photoshop;
@@ -462,7 +463,7 @@ a.button {
     }
 }
 
-.tech-skill-list__item__name {
+.skill-item-name {
     height: 40px;
     line-height: 40px;
     padding-left: 10px;
@@ -473,19 +474,19 @@ a.button {
     border-color: #fdbc40;
 }
 
-.tech-skill-list__item--practised .tech-skill-list__item__name {
+.tech-skill-list__item--practised .skill-item-name {
     color: #6e9c0f;
     background-color: #eaf6d0;
     border-color: #80bd01;
 }
 
-.tech-skill-list__item--mastered .tech-skill-list__item__name {
+.tech-skill-list__item--mastered .skill-item-name {
     color: #2a7da9;
     background-color: #d6efff;
     border-color: #3498db;
 }
 
-.tech-skill-list__item__detail {
+.skill-item-detail {
     position: absolute;
     left: 150px;
     top: 12px;
@@ -499,17 +500,17 @@ a.button {
 }
 
 @media (max-width: 749px) {
-    .tech-skill-list__item {
+    .skill-item {
         margin-bottom: 15px;
     }
 }
 
 @media (min-width: 750px) {
-    .tech-skill-list__item {
+    .skill-item {
         margin-bottom: 20px;
     }
 
-    .tech-skill-list__item:hover .tech-skill-list__item__detail {
+    .skill-item:hover .skill-item-detail {
         display: block;
         font-size: 0.875em;
     }
@@ -723,17 +724,17 @@ a.button {
     margin-bottom: 0;
 }
 
-.project__intro__header {
+.project-intro-header {
     margin-bottom: 6px;
     position: relative;
 }
 
-.project__intro__header__title {
+.project-intro-title {
     font-size: 1.2em;
     font-weight: bold;
 }
 
-.tech-tag-list__item {
+.tag-item {
     padding: 2px 5px;
     border-radius: 3px;
     display: inline-block;
@@ -747,18 +748,22 @@ a.button {
     background: #f0db4f;
     color: #333 !important;
 }
-
-.tech-tag-list__item-nodejs {
+.tag-item-bootstrap {
+    background: #5d4384;
+}
+.tag-item-php {
+    background: #7990e2;
+}
+.tag-item-android {
     background: #80bd01;
 }
-
+.tag-item-java {
+    background: #f6585c;
+}
 .tech-tag-list__item-html {
     background: #f60;
 }
-.tag-item-android {
-    background: #f0db4f;
-    color: #333 !important;
-}
+
 .tech-tag-list__item-css {
     background: #f90;
 }
@@ -771,18 +776,18 @@ a.button {
     background: #003b57;
 }
 
-.tech-tag-list__item-mysql {
-    background: #015a84;
+.tag--item-wordpress {
+    background: #11b7e9;
 }
 
-.project__intro__header__period {
+.project-intro-period {
     position: absolute;
     right: 0;
     bottom: 0;
     color: #888;
 }
 
-.project__intro__links {
+.project-intro-links {
     margin-top: 10px;
     text-align: right;
     word-spacing: 1em;
@@ -804,7 +809,7 @@ a.button {
         margin: 12px auto 0 auto;
     }
 
-    .project__intro__header__title {
+    .project-intro-title {
         padding-bottom: 3px;
     }
 }
@@ -815,16 +820,16 @@ a.button {
         padding: 0 0 20px 10px;
     }
 
-    .project__intro {
+    .project-intro {
         width: 100%;
         float: left;
     }
 
-    .project__intro__header {
+    .project-intro-header {
         margin-top: -2px;
     }
 
-    .project__intro__header__title {
+    .project-intro-title {
         padding-bottom: 3px;
     }
 
@@ -870,42 +875,42 @@ a.button {
     padding: 15px 0;
 }
 
-.footer__qrcode__img {
+.footer-qrcode-img {
     width: 60px;
     height: 60px;
     float: left;
 }
 
-.footer__qrcode__text {
+.footer-qrcode-text {
     margin: 7px 0 0 10px;
     float: left;
 }
 
-.footer__copyright p {
+.footer-copyright p {
     text-align: left;
 }
 
-.footer__copyright__comment {
+.footer-copyright-comment {
     font-size: 0.86em;
 }
 
 @media (max-width: 749px) {
-    .footer__copyright {
+    .footer-copyright {
         margin-top: 8px;
     }
 }
 
 @media (min-width: 750px) {
-    .footer__qrcode {
+    .footer-qrcode {
         float: left;
     }
 
-    .footer__copyright {
+    .footer-copyright {
         margin-top: 7px;
         float: right;
     }
 
-    .footer__copyright p {
+    .footer-copyright p {
         text-align: right;
     }
 }

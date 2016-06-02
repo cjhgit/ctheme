@@ -34,7 +34,7 @@ if (!empty($webIcon)) { ?>
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0 - 所有文章" href="<?php echo get_bloginfo('rss2_url'); ?>">
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0 - 所有评论" href="<?php bloginfo('comments_rss2_url'); ?>">
 <link rel="stylesheet" href="<?php echo RES_PATH ?>/lib/eui/eui.min.css">
-<link rel="stylesheet" href="<?php echo RES_PATH ?>/lib/font-awesome/font-awesome.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="<?php echo RES_PATH ?>/css/common.css">
 <?php if (is_home() || is_category () || is_archive() || is_search()) { ?>
 <link rel="stylesheet" href="<?php echo RES_PATH ?>/css/index.css">
@@ -44,15 +44,11 @@ if (!empty($webIcon)) { ?>
 <?php } elseif (is_404()) { ?>
 <link rel="stylesheet" href="<?php echo RES_PATH ?>/css/404.css">
 <?php } ?>
-<!--[if lt IE 9]><script src="<?php echo get_template_directory_uri(); ?>/js/html5-css3.js"></script><![endif]-->
-<!--[if lt IE 8]><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/ie7/ie7.css" /><![endif]-->
+<!--[if lt IE 8]>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+<![endif]-->
 <link rel="stylesheet" href="<?php echo RES_PATH ?>/lib/highslide/highslide.css">
-<script src="<?php echo RES_PATH; ?>/lib/jquery/jquery-1.10.2.min.js"></script>
-
-
-<script>
-$('#loading div').animate({'width':'20%'}, 50);  // 第一个节点
-</script>
 <style>
 
 
@@ -349,8 +345,6 @@ a:hover {
 <div class="wrap">
 <!-- 头部开始 -->
 <header class="header theme-header">
-	<div id="loading"><div></div></div>
-    
     <?php if (current_user_can('level_10')) { ?>
  		<div class="admin"><a href="<?php bloginfo('url'); ?>/wp-admin">管理</a></div>
 	<?php } ?>

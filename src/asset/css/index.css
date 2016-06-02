@@ -34,7 +34,7 @@
 	overflow: hidden;
 	margin: -35px 0 0;
 	display: block;
-	background: url(../images/ad_ctr.png) no-repeat;
+	background: url(../img/ad_ctr.png) no-repeat;
 	position: absolute;
 	top: 50%;
 	cursor: pointer;
@@ -84,7 +84,7 @@
 }
 
 .flex-control-paging li a {
-	background: url(../images/dot.png) no-repeat 0 -16px;
+	background: url(../img/dot.png) no-repeat 0 -16px;
 	display: block;
 	height: 16px;
 	overflow: hidden;

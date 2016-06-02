@@ -20,6 +20,3 @@
 	}
     ?>
 </div>
-<script>
-$('#loading div').animate({'width':'60%'}, 50);  // 第三个节点
-</script>

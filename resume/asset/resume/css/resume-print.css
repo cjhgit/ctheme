@@ -92,29 +92,29 @@ a:hover {
     padding-bottom: 15px;
 }
 
-.header__logo {
+.header-logo {
     line-height: 40px;
     height: 40px;
 }
 
-.header__logo__fullname {
+.header-logo-fullname {
     font-size: 2.8em;
     font-family: 'PingHei', 'STHeiti SC', 'SimHei';
 }
 
-.header__logo__jobtitle {
+.header-logo-jobtitle {
     font-size: 1.5em;
     color: #888;
     padding-left: 10px;
 }
 
-.header__address {
+.header-address {
     font-style: normal;
     line-height: 21px;
     font-size: 0.875em;
 }
 
-.header__address__item {
+.address-item {
     padding-left: 24px;
     background: url(../asset/resume/img/icon-sprites.png) no-repeat;
     background-size: 20px auto;
@@ -125,33 +125,33 @@ a:hover {
     margin-right: 22px;
 }
 
-.header__address__item:last-child {
+.address-item:last-child {
     margin-right: 0;
 }
 
-.header__address__item-phone {
+.address-item-phone {
     background-position: 0 0;
 }
 
-.header__address__item-qq {
+.address-item-qq {
     background-position: 0 -28px;
 }
 
-.header__address__item-email {
+.address-item-email {
     background-position: left bottom;
 }
 
-.header__address__item-blog {
+.address-item-blog {
     background: none;
     padding-left: 0;
     float: right;
 }
 
-.header__address__item-blog a {
+.address-item-blog a {
     font-size: 0.86em;
 }
 
-.header__address__item-blog a:after {
+.address-item-blog a:after {
     content: '「' attr(href) '」';
 }
 
@@ -183,12 +183,12 @@ a:hover {
 }
 
 /* 技术技能章节 */
-.tech-skill-list__item {
+.skill-item {
     position: relative;
     margin-bottom: 15px;
 }
 
-.tech-skill-list__item-html-and-css {
+.skill-item-html-and-css {
     width: 90%;
 }
 
@@ -196,19 +196,19 @@ a:hover {
     width: 75%;
 }
 
-.tech-skill-list__item-aspdotnet {
+.skill-item-android {
     width: 60%;
 }
 
-.tech-skill-list__item-sql {
+.skill-item-sql {
     width: 55%;
 }
 
-.tech-skill-list__item-photoshop {
+.skill-item-photoshop {
     width: 50%;
 }
 
-.tech-skill-list__item__name {
+.skill-item-name {
     height: 34px;
     line-height: 34px;
     padding-left: 10px;
@@ -219,19 +219,19 @@ a:hover {
     border-color: #fdbc40;
 }
 
-.tech-skill-list__item--practised .tech-skill-list__item__name {
+.tech-skill-list__item--practised .skill-item-name {
     color: #6e9c0f;
     background-color: #eaf6d0;
     border-color: #80bd01;
 }
 
-.tech-skill-list__item--mastered .tech-skill-list__item__name {
+.tech-skill-list__item--mastered .skill-item-name {
     color: #2a7da9;
     background-color: #d6efff;
     border-color: #3498db;
 }
 
-.tech-skill-list__item__detail {
+.skill-item-detail {
     display: none;
 }
 
@@ -339,15 +339,15 @@ a:hover {
     margin-bottom: 0;
 }
 
-.project__intro__header {
+.project-intro-header {
     margin-bottom: 6px;
 }
 
-.project__intro__header__title, .project__intro__header__period {
+.project-intro-title, .project-intro-period {
     float: left;
 }
 
-.project__intro__header__title {
+.project-intro-title {
     font-size: 1.2em;
     font-weight: bold;
 }
@@ -356,7 +356,7 @@ a:hover {
     float: right;
 }
 
-.tech-tag-list__item {
+.tag-item {
     padding: 2px 5px;
     border-radius: 3px;
     display: inline-block;
@@ -370,12 +370,17 @@ a:hover {
     background: #f0db4f;
     color: #333 !important;
 }
-.tag-item-android {
-    background: #f0db4f;
-    color: #333 !important;
+.tag-item-bootstrap {
+    background: #5d4384;
 }
-.tech-tag-list__item-nodejs {
+.tag-item-php {
+    background: #7990e2;
+}
+.tag-item-android {
     background: #80bd01;
+}
+.tag-item-java {
+    background: #f6585c;
 }
 
 .tech-tag-list__item-html {
@@ -394,31 +399,31 @@ a:hover {
     background: #003b57;
 }
 
-.tech-tag-list__item-mysql {
-    background: #015a84;
+.tag--item-wordpress {
+    background: #11b7e9;
 }
 
-.project__intro__header__period {
+.project-intro-period {
     margin-left: 4px;
     font-size: 0.75em;
     color: #888;
 }
 
-.project__intro__header__period:before {
+.project-intro-period:before {
     content: '（';
 }
 
-.project__intro__header__period:after {
+.project-intro-period:after {
     content: '）';
 }
 
-.project__intro__links {
+.project-intro-links {
     margin-top: 8px;
     text-align: right;
     word-spacing: 1em;
 }
 
-.project__intro__links a:after {
+.project-intro-links a:after {
     content: '「' attr(href) '」';
 }
 
@@ -437,31 +442,31 @@ a:hover {
     padding-top: 15px;
 }
 
-.footer__qrcode {
+.footer-qrcode {
     float: left;
 }
 
-.footer__qrcode__img {
+.footer-qrcode-img {
     width: 60px;
     height: 60px;
     float: left;
 }
 
-.footer__qrcode__text {
+.footer-qrcode-text {
     margin: 7px 0 0 10px;
     float: left;
 }
 
-.footer__copyright {
+.footer-copyright {
     margin-top: 7px;
     float: right;
     text-align: right;
 }
 
-.footer__copyright p {
+.footer-copyright p {
     text-align: left;
 }
 
-.footer__copyright__comment {
+.footer-copyright-comment {
     font-size: 0.86em;
 }

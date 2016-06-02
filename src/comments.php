@@ -116,12 +116,14 @@ if (comments_open()) {
                  <p class="comment-form-comment">
                     <textarea id="comment" name="comment" rows="3" aria-describedby="form-allowed-tags" aria-required="true" required class="theme-color-border" placeholder="<?php echo get_option('comment_text'); ?>"></textarea>
                 </p>
-                <div>
-                <?php
-				output_smilies(); // 输出表情
-				?>
-                </div>	
-        			
+                <div id="show-expression">
+                    <i class="fa fa-smile-o"></i> 表情
+                </div>
+                <div id="expression-box" class="expression-box">
+                    <?php
+                    output_smilies(); // 输出表情
+                    ?>
+                </div>
                 <div id="it"></div>
                 <p class="form-submit">
                     <input name="submit" type="submit" id="submit" class="submit theme-color-bg" value="提交评论" /> <input type='hidden' name='comment_post_ID' value='<?php echo $post->ID; ?>' id='comment_post_ID' />

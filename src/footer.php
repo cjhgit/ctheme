@@ -11,7 +11,7 @@
     </div>
 </footer>
 <!-- /页脚 -->
-</div>
+</div><!-- /.wrap -->
 <!-- 返回顶部 --> 
 <a href="#" class="to-top theme-color-bg"><i class="fa fa-angle-up"></i></a>
 <!-- /返回顶部 -->
@@ -54,9 +54,9 @@
 <!-- /wp_footer -->
 
 <!-- 懒加载-->
+<script src="//cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
 <script src="<?php echo RES_PATH ?>/lib/lazyload/jquery.lazyload.min.js"></script>
 <script>
-$('#loading div').animate({'width':'80%'}, 50);  // 第四个节点
 
 // 处理懒加载的图片
 $("img").lazyload({
@@ -265,10 +265,6 @@ $(function() {
 });
 */   
 </script>
-<script>
-$('#loading div').animate({'width':'100%'}, 50, function() {$("#loading").fadeOut();});  // 第五个节点
-</script>
-
 </body>
 
 

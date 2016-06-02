@@ -101,7 +101,7 @@
 .post {
 	margin-top: 10px;
 	padding: 15px;
-	background: #FFF url(../images/monkey.png) no-repeat right top;
+	background: #FFF url(../img/monkey.png) no-repeat right top;
 }
 .post-title {
 	font-size: 30px;
@@ -260,7 +260,7 @@
 	padding: 10px;
 	background: #fbfdfb;
 	border: #eee solid 1px;
-	border-radius: 3px; 
+	border-radius: 3px;
 }
 .comment-author-name {
 }
@@ -362,7 +362,7 @@ label {
 }
 /* 评论等级 */
 /*VIP评论之星*/
-.vp,.vip,.vip1,.vip2,.vip3,.vip4,.vip5,.vip6,.vip7{background: url(../images/vip.png) no-repeat;display: inline-block;overflow: hidden;border: none;}
+.vp,.vip,.vip1,.vip2,.vip3,.vip4,.vip5,.vip6,.vip7{background: url(../img/vip.png) no-repeat;display: inline-block;overflow: hidden;border: none;}
 .vp{background-position:-515px -2px;width: 16px;height: 16px;margin-bottom: -3px;}
 .vp:hover{background-position:-515px -22px;width: 16px;height: 16px;margin-bottom: -3px;}
 .vip{background-position:-494px -3px;width: 16px;height: 14px;margin-bottom: -2px;}
@@ -486,4 +486,21 @@ label {
 	-moz-border-radius: 5px !important;
 	border-radius: 5px !important;
 	background: #f00 !important;
+}
+
+/* 表情框 */
+.expression-box {
+    display: none;
+	width: 400px;
+	max-width: 100%;
+    padding: 10px;
+	background: #f9f9f9;
+}
+.expression-box a {
+    display: inline-block;
+    padding: 5px;
+}
+.expression-box img {
+    width: 25px;
+    height: 25px;
 }

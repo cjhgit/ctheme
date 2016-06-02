@@ -88,24 +88,17 @@ $('#notice').autoScroll({lineHeight: 25});
 // 返回顶部
 $('.to-top').backToTop();
 
-// 导航菜单悬停
-$('#nav-header').posfixed({
-	distance: 0,
-	pos: "top",
-	type: "while",
-	hide:false	// TODO 这里在false前面加一个空格会出错，原因未知
-});  
-
 var isShow = false; // 菜单是否显示
 
-$("#mask").click(function(e) {
+// 点击遮罩层隐藏菜单
+$('#mask').on('click', function(e) {
 	$("#mask").hide(0.8);
 	$('#nav').css('right', '-70%');
 	isShow = false;
 });
 
 // 点击菜单按钮，显示/隐藏菜单
-$("#menu-btn").click(function(e) {
+$('#menu-btn').on('click', function(e) {
 	if (isShow) {
 		$("#mask").hide(0.8);
 		$('#nav').css('right', '-70%');
@@ -230,11 +223,14 @@ $.fn.commentDislike = function() {
 	}
 };
 
-$(document).on("click", ".comment-dislike",
-	function() {
-		$(this).commentDislike();
-	}
-);
+$('.comment-dislike').on('click', function() {
+	$(this).commentDislike();
+});
+
+// 显示表情框
+$('#show-expression').on('click', function() {
+    $('#expression-box').toggle();
+});
 
 // 没乱用的功能
 try {
@@ -244,6 +240,13 @@ try {
 } catch(e) {
 }
 
+// 导航菜单悬停
+$('#nav-header').posfixed({
+    distance: 0,
+    pos: "top",
+    type: "while",
+    hide:false	// TODO 这里在false前面加一个空格会出错，原因未知
+});
 
 }); // end of $(document).ready
 

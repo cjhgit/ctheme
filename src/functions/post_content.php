@@ -295,8 +295,8 @@ function smilies_initx() {
 }
  
 remove_action('init', 'smilies_init', 5);
-add_action( 'init' , 'smilies_initx' , 5 );
- 
+add_action('init', 'smilies_initx', 5);
+
 // 输出表情
 function output_smilies() {
 	global $wpsmiliestrans;
@@ -306,9 +306,10 @@ function output_smilies() {
 	while (key($wpsmiliestrans) !== null) {
 	//for ($i = 0; $i < $SMILES_COUNT; $i++) {
 		?>
-        <a href="javascript:grin('<?php echo key($wpsmiliestrans); ?>')"><img src="<?php bloginfo('template_url'); ?>/images/smilies/<?php echo current($wpsmiliestrans); ?>" alt="" /></a>
+        <a href="javascript:grin('<?php echo key($wpsmiliestrans); ?>')"><img src="<?php bloginfo('template_url'); ?>/asset/img/smilies/<?php echo current($wpsmiliestrans); ?>" alt="" /></a>
         
         <?
+        // TODO 常量化
 		next($wpsmiliestrans);
 	}
 }
