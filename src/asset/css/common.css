@@ -11,6 +11,7 @@ slide
 侧栏：99
 返回顶部：900
 管理：2000
+签名：10000
 */
 /* reset */
 * {
@@ -101,17 +102,6 @@ ul, ol {
 }
 
 /* 头部 */
-#loading {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 2px;
-}
-#loading div {
-	height: 2px;
-	background: #f90;
-}
 .header .admin {
 	position: fixed;
 	top: 10px;
@@ -1139,4 +1129,36 @@ from {
 	.post-list2 .post-item {
 		width: 50%;
 	}
+}
+
+/* 签名 */
+.sign {
+	position: fixed;
+	top: 5px;
+	right: 10px;
+	z-index: 10000;
+}
+.st0 {
+    fill: none;
+    stroke: #333;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+     /*stroke-linecap: round; 线段端点风格（butt square round）*/
+    /*stroke-lineJoin: round;  线段连接处风格（miter，round，bevel）*/
+     /*stroke-dasharray: "5，10"; 该属性设置线段虚实线 第一个参数是虚线段每段长度，第二个是空隙的长度*/
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* 浏览器升级提示 */
+.update-brower {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 10px;
+	background-color: #fff;
 }

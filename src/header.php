@@ -18,6 +18,10 @@
 <?php } ?>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php echo_title(); ?></title>
+<!--[if lt IE 8]>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+<![endif]-->
 <?php 
 $shortcutIcon = get_option('web_shortcut_icon');
 if (!empty($shortcutIcon)) { ?>
@@ -44,10 +48,6 @@ if (!empty($webIcon)) { ?>
 <?php } elseif (is_404()) { ?>
 <link rel="stylesheet" href="<?php echo RES_PATH ?>/css/404.css">
 <?php } ?>
-<!--[if lt IE 8]>
-    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
-<![endif]-->
 <link rel="stylesheet" href="<?php echo RES_PATH ?>/lib/highslide/highslide.css">
 <style>
 
@@ -343,7 +343,14 @@ a:hover {
 
 <body class="theme-body">
 <div class="wrap">
-<!-- 头部开始 -->
+<!--[if lte IE 8]>
+<div class="update-brower">
+    <div>您正在使用的浏览器版本过低，将不能正常浏览和使用本网站</div>
+    <a href="http://windows.microsoft.com/zh-cn/windows/upgrade-your-browser" target="_blank">升级至新版本的IE浏览器</a> 或者 
+    <a href="http://www.google.com/chrome/" target="_blank">使用谷歌浏览器</a>
+</div>
+<![endif]-->
+<!-- 头部 -->
 <header class="header theme-header">
     <?php if (current_user_can('level_10')) { ?>
  		<div class="admin"><a href="<?php bloginfo('url'); ?>/wp-admin">管理</a></div>
@@ -359,8 +366,8 @@ if(function_exists('performance')) performance(true) ;
         </div>
     </div>
 </header>
-<!-- 头部结束 -->
-<!-- 导航菜单开始 -->
+<!-- /头部 -->
+<!-- 导航菜单 -->
 <nav id="nav-header" class="mynavbar theme-nav">
 	<div id="mask" class="mask"></div>
     <div class="navbar-box">
@@ -371,4 +378,4 @@ if(function_exists('performance')) performance(true) ;
         ?>
     </div>
 </nav>
-<!-- 导航菜单结束-->
+<!-- /导航菜单-->

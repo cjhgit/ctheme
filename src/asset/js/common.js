@@ -248,6 +248,29 @@ $('#nav-header').posfixed({
     hide:false	// TODO 这里在false前面加一个空格会出错，原因未知
 });
 
+// 签名
+drawName(30);
+
+function drawName(num) {
+    var speed = 200.0; // 每秒绘制100px
+    var totalTime = 0;
+    for (var i = 0; i < num; i++) {
+        var path = document.querySelector('#name' + i);
+        if (path) {
+            var length = path.getTotalLength(); // TODO IE8这里会报错
+            var time = length / speed;
+
+            path.style['stroke-dasharray'] = length;
+            path.style['stroke-dashoffset'] = length;
+            path.style['animation'] = 'dash ' + time + 's linear forwards';
+            path.style['animation-delay'] = totalTime + 's';
+
+            totalTime += time;
+        } 
+    }
+}
+
+
 }); // end of $(document).ready
 
 // 选择表情图片
