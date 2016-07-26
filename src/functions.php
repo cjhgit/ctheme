@@ -2,7 +2,10 @@
 
 require get_template_directory() . '/functions/index.php';
 
-
+// 阻止 WordPress 在文字段落与段落间加上< p >...< / p>这对标签
+remove_filter (  'the_content' ,  'wpautop'  );
+// 阻止在编辑器按下[Enter]键，会自动帮你换行，自动加上< br>
+remove_filter (  'the_excerpt' ,  'wpautop'  );
 
 function add_title_to_avatar($avatar, $id_or_email) {
     $title = '';

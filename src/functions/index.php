@@ -3,6 +3,7 @@
 require get_template_directory() . '/functions/type.php'; // 文章类型
 require get_template_directory() . '/functions/post_list.php';
 require get_template_directory() . '/functions/product.php';
+require get_template_directory() . '/functions/code.php';
 require get_template_directory() . '/functions/talk.php';
 require get_template_directory() . '/functions/notice.php';
 require get_template_directory() . '/functions/post_content.php';

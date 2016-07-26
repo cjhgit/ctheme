@@ -10,6 +10,3 @@ if (in_category(array(64)) ) {
 } 
 
 ?>
-<script>
-$('#loading div').animate({'width':'40%'}, 50);  // 第二个节点
-</script>

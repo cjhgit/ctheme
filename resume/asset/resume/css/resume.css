@@ -91,7 +91,6 @@ a:hover {
 /* 通用列按钮样式 */
 .button {
     background: #1d9bd9;
-    background: -webkit-linear-gradient(#3baee7, #08c);
     background: linear-gradient(#3baee7, #08c);
     color: #f6f6f6;
     border-radius: 0.4em;
@@ -109,7 +108,6 @@ a.button {
 .button:hover {
     color: #fff;
     background: #2fa2dc;
-    background: -webkit-linear-gradient(#4ab4e8, #1491d0);
     background: linear-gradient(#4ab4e8, #1491d0);
     text-decoration: none;
 }
@@ -315,23 +313,12 @@ a.button {
 /* 技术技能章节 */
 .skill-item {
     position: relative;
-    -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
 }
 
 .skill-item-javascript {
     width: 90%;
-    -webkit-animation-name: bar-javascript;
     animation-name: bar-javascript;
-}
-
-@-webkit-keyframes bar-javascript {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
 }
 
 @keyframes bar-javascript {
@@ -345,17 +332,7 @@ a.button {
 
 .skill-item-html-and-css {
     width: 90%;
-    -webkit-animation-name: bar-html-and-css;
     animation-name: bar-html-and-css;
-}
-
-@-webkit-keyframes bar-html-and-css {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 90%;
-    }
 }
 
 @keyframes bar-html-and-css {
@@ -369,17 +346,7 @@ a.button {
 
 .tech-skill-list__item-nodejs {
     width: 75%;
-    -webkit-animation-name: bar-nodejs;
     animation-name: bar-nodejs;
-}
-
-@-webkit-keyframes bar-nodejs {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 75%;
-    }
 }
 
 @keyframes bar-nodejs {
@@ -391,22 +358,26 @@ a.button {
     }
 }
 
-.skill-item-android {
-    width: 60%;
-    -webkit-animation-name: bar-aspdotnet;
-    animation-name: bar-aspdotnet;
+.skill-item-java {
+    width: 80%;
+    animation-name: anim-java;
 }
 
-@-webkit-keyframes bar-aspdotnet {
+@keyframes anim-java {
     0% {
         width: 0;
     }
     100% {
-        width: 60%;
+        width: 80%;
     }
 }
 
-@keyframes bar-aspdotnet {
+.skill-item-android {
+    width: 60%;
+    animation-name: anim-android;
+}
+
+@keyframes anim-android {
     0% {
         width: 0;
     }
@@ -417,17 +388,7 @@ a.button {
 
 .skill-item-sql {
     width: 55%;
-    -webkit-animation-name: bar-sql;
     animation-name: bar-sql;
-}
-
-@-webkit-keyframes bar-sql {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 55%;
-    }
 }
 
 @keyframes bar-sql {
@@ -441,17 +402,7 @@ a.button {
 
 .skill-item-photoshop {
     width: 50%;
-    -webkit-animation-name: bar-photoshop;
     animation-name: bar-photoshop;
-}
-
-@-webkit-keyframes bar-photoshop {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 50%;
-    }
 }
 
 @keyframes bar-photoshop {
@@ -516,24 +467,9 @@ a.button {
     }
 
     .fade {
-        -webkit-animation: fadeIn 0.8s;
         animation: fadeIn 0.8s;
     }
 
-    @-webkit-keyframes fadeIn {
-        0% {
-            display: none;
-            opacity: 0;
-        }
-        1% {
-            display: block;
-            opacity: 0;
-        }
-        100% {
-            display: block;
-            opacity: 1;
-        }
-    }
     @keyframes fadeIn {
         0% {
             display: none;
@@ -760,19 +696,15 @@ a.button {
 .tag-item-java {
     background: #f6585c;
 }
-.tech-tag-list__item-html {
+.tag-item-html {
     background: #f60;
 }
 
-.tech-tag-list__item-css {
+.tag-item-css {
     background: #f90;
 }
 
-.tech-tag-list__item-aspdotnet {
-    background: #68217a;
-}
-
-.tech-tag-list__item-sqlite {
+.tag-item-sql {
     background: #003b57;
 }
 

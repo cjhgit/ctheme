@@ -7,7 +7,7 @@
 add_filter('show_admin_bar', '__return_false');
 	
 // 设置后台编辑器样式
-add_editor_style('/css/editor-style.css');
+add_editor_style('/asset/css/editor-style.css'); // TODO 常量化
 
 // 去掉后台首页一些没用的功能
 function disable_dashboard_widgets() {   
@@ -114,7 +114,7 @@ function init_button() {
 }
 
 function add_plugin($plugin_array) {
-   $plugin_array['recentposts'] = get_template_directory_uri() . '/js/editor_table.js';
+   $plugin_array['recentposts'] = get_template_directory_uri() . '/asset/js/editor_table.js'; // TODO 常量化
    return $plugin_array;
 }
 
@@ -124,9 +124,9 @@ function add_button($buttons) {
 }
 wp_enqueue_script(
         'my_quicktags',
-        get_stylesheet_directory_uri().'/js/quicktags.js',
+        get_stylesheet_directory_uri().'/asset/js/quicktags.js',
         array('quicktags')
-    );
+    ); // TODO 常量化
     
 	
 add_action('init', 'init_button');
@@ -165,7 +165,7 @@ function register_button2( $buttons ) {
    return $buttons;
 }
 function add_plugin2( $plugin_array ) {
-   $plugin_array['recentposts2'] = get_template_directory_uri() . '/js/editor_table.js';
+   $plugin_array['recentposts2'] = get_template_directory_uri() . '/asset/js/editor_table.js'; // TODO 常量化
    return $plugin_array;
 }
 function my_recent_posts_button2() {

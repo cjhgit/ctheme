@@ -189,7 +189,7 @@ a:hover {
 }
 
 .skill-item-html-and-css {
-    width: 90%;
+    width: 100%;
 }
 
 .tech-skill-list__item-nodejs {
@@ -198,6 +198,10 @@ a:hover {
 
 .skill-item-android {
     width: 60%;
+}
+
+.skill-item-java {
+    width: 80%;
 }
 
 .skill-item-sql {

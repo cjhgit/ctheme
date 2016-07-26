@@ -1,6 +1,8 @@
 <?php
+/**
+ * 说说
+ */
 
-// 创建一个产品类型
 add_action('init', 'my_custom_post_state');
 
 function my_custom_post_state() {

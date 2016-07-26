@@ -23,8 +23,8 @@
     <meta name="description" content="陈建杭的个人简历">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="asset/resume/css/resume.css" media="not print">
-    <link rel="stylesheet" href="asset/resume/css/resume-print.css" media="print">
+    <link rel="stylesheet" href="/asset/resume/css/resume.css" media="not print">
+    <link rel="stylesheet" href="/asset/resume/css/resume-print.css" media="print">
 </head>
 
 <body>
@@ -40,7 +40,7 @@
 <header class="header">
     <div class="boundary clearfix">
         <h1 class="header-logo">
-            <span class="header-logo-fullname">陈建杭</span><span class="header-logo-jobtitle">前端开发工程师</span>
+            <span class="header-logo-fullname">陈建杭</span><span class="header-logo-jobtitle">软件开发工程师</span>
         </h1>
         <address class="header-address">
             <ul>
@@ -86,10 +86,11 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="skill-item skill-item-android tech-skill-list__item--practised">
-                        <h4 class="skill-item-name">Javaweb</h4>
+                    <li class="skill-item skill-item-java tech-skill-list__item--practised">
+                        <h4 class="skill-item-name">Java</h4>
                         <div class="skill-item-detail fade">
                             <ul class="list">
+                                <li>熟悉 Java；
                                 <li>熟悉基于 SSM 框架开发；</li>
                             </ul>
                         </div>
@@ -248,7 +249,7 @@
                             </ul>
                             <p class="project-intro-period">2015/4 至今</p>
                         </header>
-                        <p>基于<strong>websocket</strong>的在线即使通讯项目。</p>
+                        <p>基于<strong>websocket</strong>的在线即时通讯项目。</p>
                         <p>后台基于 SSM 框架，前端基于 Bootstrap UI库。</p>
                         <!--
                         <ul class="list">
@@ -292,6 +293,19 @@
                         <p>一个类似脸萌的头像制作软件，只不过不是制作人物头像，而是卡通猫头像。</p>
                         <p>使用 dom4j 解析svg文件，使用 batik 库转化 svg 成图片。使用 AI 制作矢量图。</p>
                         <p>项目收获：AI绘图。</p>
+                    </div>
+                </section>
+                <section class="project project--nothumb clearfix">
+                    <div class="project-intro">
+                        <header class="project-intro-header clearfix">
+                            <h4 class="project-intro-title">脸萌网页版</h4>
+                            <ul class="tech-tag-list">
+                                <li class="tag-item tag-item-html">前端</li>
+                                <li class="tag-item tag-item-java">Java</li>
+                            </ul>
+                            <p class="project-intro-period">2016/1</p>
+                        </header>
+                        <p>仿脸萌，前端根据用户操作生成相应svg图片，通过后台接口转化成png图片供用户下载。</p>
                     </div>
                 </section>
                 <section class="project project--nothumb clearfix">
